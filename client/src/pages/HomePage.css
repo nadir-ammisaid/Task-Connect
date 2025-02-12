@@ -1,0 +1,88 @@
+/* version mobile */
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+#header-landing {
+  margin: 0.5rem 0.6rem 0.5rem 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* #logoImageMobileLanding {
+  height: 3.5rem;
+  display: block;
+} */
+
+/* #logoImageDesktop {
+  display: none;
+} */
+
+/* #bell-icon {
+  height: 3.7rem;
+} */
+
+#carousel {
+  margin: 1rem 0 1rem 0;
+}
+
+#carousel-heading-text {
+  text-align: center;
+  font-size: 5vw;
+  margin: 3vw;
+}
+
+#mainsectionpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 2rem 0;
+}
+
+#startImpactingAndRequestImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 2rem 2rem;
+  gap: 1rem;
+}
+
+#mainPageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+}
+
+#mainImage {
+  width: 100vw;
+}
+
+#plusButton {
+  width: clamp(5rem, 12vw, 12rem);
+}
+
+/* version tablet/desktop */
+
+@media (min-width: 450px) {
+  #logoImageMobileLanding {
+    display: none;
+  }
+
+  /* #logoImageDesktop {
+    height: 5.0rem;
+    display: block;
+  } */
+
+  #carousel {
+    margin: 1rem 0 1rem 0;
+  }
+
+  /* #bell-icon {
+    height: 5rem;
+  } */
+}

@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import the main app component
 import App from "./App";
 import BrowsePage from "./pages/BrowsePage";
+import HomePage from "./pages/HomePage";
 import TaskDetailPage from "./pages/TaskDetailPage";
 import TaskNew from "./pages/TaskNewPage";
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     path: "/", // The root path
     element: <App />, // Renders the App component for the home page
     children: [
+      {
+        path: "",
+        element: <HomePage />,
+      },
       {
         path: "browse",
         element: <BrowsePage />,
