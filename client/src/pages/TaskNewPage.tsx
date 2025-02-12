@@ -6,12 +6,11 @@ function TaskNew() {
   const navigate = useNavigate();
 
   const newTask = {
-    // firstname: "",
-    // lastname: "",
     title: "",
     description: "",
     location: "",
     image: "",
+    category_id: 0,
   };
 
   return (

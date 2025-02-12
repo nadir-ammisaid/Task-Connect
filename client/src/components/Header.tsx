@@ -1,5 +1,5 @@
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logoDesktop from "../../public/logoDesktop.png";
 import logoMobile from "../../public/logoMobile.png";
 import bell_icon from "../../src/assets/images/bell_icon.png";
@@ -13,46 +13,47 @@ function Header() {
   return (
     <section id="headerContainer">
       <div id="logos">
-        <Link to="/" className="footerLinks">
+        <NavLink to="/" className="footerLinks">
           <img src={logoMobile} alt="logo" id="logoImageMobile" />
           <img src={logoDesktop} alt="logo" id="logoImageDesktop" />
-        </Link>
+        </NavLink>
       </div>
 
-      <nav id="navbarLinks">
-        <Link to="/" className="footerLinks">
+      <nav id="navbarLinksContainer">
+        <NavLink to="/" className="footerLinks">
           <img src={homeIcon} alt="home-icon" className="navbarIcons" />
           Home
-        </Link>
+        </NavLink>
 
-        <Link to="/browse" className="footerLinks">
+        <NavLink to="/browse" className="navbarLinks">
           <img src={browseIcon} alt="browse-icon" className="navbarIcons" />
           Browse
-        </Link>
+        </NavLink>
 
-        <Link to="/post-a-new-task" className="footerLinks">
+        <NavLink to="/post-a-new-task" className="footerLinks">
           <img
             src={postATaskIcon}
             alt="post-a-task-icon"
             className="navbarIcons"
           />
           Post a task
-        </Link>
+        </NavLink>
 
-        <Link to="/my-tasks" className="footerLinks">
+        <NavLink to="/my-tasks" className="footerLinks">
           <img src={myTasksIcon} alt="my-tasks-icon" className="navbarIcons" />
           My tasks
-        </Link>
-        <Link to="/account" className="footerLinks">
+        </NavLink>
+
+        <NavLink to="/account" className="footerLinks">
           <img src={accountIcon} alt="account-icon" className="navbarIcons" />
           Account
-        </Link>
+        </NavLink>
       </nav>
 
       <div id="bellContainer">
-        <Link to="/notifications" className="footerLinks">
+        <NavLink to="/notifications" className="footerLinks">
           <img src={bell_icon} alt="bell-icon" className="bellIcons" />
-        </Link>
+        </NavLink>
       </div>
     </section>
   );

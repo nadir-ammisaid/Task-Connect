@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 
 type TaskData = {
   // firstname: string;
@@ -7,8 +7,14 @@ type TaskData = {
   description: string;
   location: string;
   image: string;
+  category_id: number;
   // status: string;
 };
+
+interface Category {
+  id: number;
+  name: string;
+}
 
 interface TaskFormProps {
   children: ReactNode;
@@ -17,6 +23,14 @@ interface TaskFormProps {
 }
 
 function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}/api/categories`)
+      .then((response) => response.json())
+      .then((data) => setCategories(data))
+      .catch((error) => console.error("Erreur lors du fetch :", error));
+  }, []);
   return (
     <>
       <form
@@ -32,6 +46,7 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
           const description = formData.get("description") as string;
           const location = formData.get("location") as string;
           const image = formData.get("image") as string;
+          const category_id = Number(formData.get("category_id"));
           // const status = formData.get("status") as string;
 
           onSubmit({
@@ -41,6 +56,7 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
             description,
             location,
             image,
+            category_id,
             // status,
           });
         }}
@@ -69,6 +85,21 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
         />
 
         {/* */}
+        <label htmlFor="category-id">Category:</label>
+        <select
+          id="category-id"
+          name="category_id"
+          defaultValue={defaultValue.category_id}
+          required
+        >
+          <option value="">Select a category</option>
+          {categories.map((category) => (
+            <option key={category.id} value={category.id}>
+              {category.name}
+            </option>
+          ))}
+        </select>
+
         <label htmlFor="description-id">Description:</label>
         <input
           id="description-id"
