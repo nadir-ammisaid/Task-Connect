@@ -54,8 +54,14 @@ class TaskRepository {
   ) {
     // Execute the SQL INSERT query to add a new item to the "task" table
     const [result] = await databaseClient.query<Result>(
-      "insert into task (title, description, location, image, status, customer_id, category_id) values (?, ?, ?, ?, 'open', 1, 1)",
-      [task.title, task.description, task.location, task.image],
+      "insert into task (title, description, location, image, status, customer_id, category_id) values (?, ?, ?, ?, 'open', 1, ?)",
+      [
+        task.title,
+        task.description,
+        task.location,
+        task.image,
+        task.category_id,
+      ],
     );
 
     // Return the ID of the newly inserted item
@@ -127,8 +133,8 @@ class TaskRepository {
       JOIN customer ON task.customer_id = customer.id
       JOIN user ON customer.user_id = user.id
       JOIN category ON task.category_id = category.id
+      ORDER BY task.id DESC
     `);
-
     return rows.map((row) => ({
       id: row.id,
       title: row.title,
@@ -138,7 +144,7 @@ class TaskRepository {
       status: row.status,
       selected_offer: row.selected_offer,
       category_id: row.category_id,
-      category_name: row.category_name, // Ajout du nom de la catégorie
+      category_name: row.category_name,
       customer: {
         id: row.customer_id,
         user: {

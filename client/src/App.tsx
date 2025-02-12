@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main id="mainOfApp">
         <Outlet />
       </main>
       <Footer />
