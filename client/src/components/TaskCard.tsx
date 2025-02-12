@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./TaskCard.css";
 
 interface User {
   firstname: string;
@@ -19,11 +20,13 @@ interface Task {
   status: string;
   selected_offer: number | null;
   category_id: string;
+  category_name: string;
   customer: Customer;
 }
 
 function TaskCard() {
   const [tasks, setTasks] = useState<Task[]>([]);
+
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/tasks/`)
       .then((response) => response.json())
@@ -34,19 +37,19 @@ function TaskCard() {
   return (
     <>
       {tasks.map((task) => (
-        <div key={task.id}>
-          <div className="card" key={task.id}>
-            <h2 className="title-card">{task.title}</h2>
-            <p>{task.description}</p>
-            <p>{task.status}</p>
-            <div className="card-footer">
-              <p className="name">{task.location}</p>
-            </div>
-            <div className="footer-card">
-              <p>
-                By {task.customer.user.firstname} {task.customer.user.lastname}
-              </p>
-            </div>
+        <div className="card" key={task.id}>
+          <h2 className="title-card">{task.title}</h2>
+          <p className="category">{task.category_name}</p>
+          <div className="time-info">
+            <p>Tomorrow, 11:00 — 13:00 (2h)</p>
+          </div>
+          <div className="card-footer">
+            <p className="location-info">{task.location}</p>
+          </div>
+          <div className="footer-card">
+            <p>
+              By {task.customer.user.firstname} {task.customer.user.lastname}
+            </p>
           </div>
         </div>
       ))}

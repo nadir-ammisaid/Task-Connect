@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+#logoImageMobile {
+  height: 3.5rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+#logoImageMobile:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.2));
+}
+
+#logoImageDesktop {
+  display: none;
+}
+
+.navbarIcons {
+  width: 2rem;
+  transition: all 0.3s ease;
+}
+
+.navbarIcons:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.2));
+}
+
+.bellIcons {
+  width: 3rem;
+  transition: all 0.3s ease;
+}
+
+.bellIcons:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.2));
+}
+
+#navbarLinksFooter {
+  position: fixed; /* Fixe le footer en bas */
+  bottom: 0; /* Le positionne tout en bas */
+  left: 0; /* L'aligne à gauche */
+  right: 0; /* L'aligne à droite */
+  background-color: white; /* Fond blanc pour la lisibilité */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 0.2rem 0.5rem 0.2rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère au-dessus */
+  z-index: 1000; /* S'assure que le footer reste au-dessus des autres éléments */
+}
+
+#navbarLinksFooter .active {
+  color: #207868;
+  font-weight: bold;
+}
+
+#navbarLinksFooter .active img {
+  filter: brightness(0) saturate(100%) invert(43%) sepia(24%) saturate(1080%)
+    hue-rotate(135deg) brightness(92%) contrast(89%);
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.footerLinks:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.2));
+}
+
+/* version tablet/desktop */
+
+@media (min-width: 450px) {
+  #navbarLinksFooter {
+    display: none;
+  }
+}

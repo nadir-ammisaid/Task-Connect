@@ -48,7 +48,7 @@ const add: RequestHandler = async (req, res, next) => {
       image: req.body.image || null,
       status: "open" as const,
       customer_id: 1, // Temporary
-      category_id: 1, // Temporary
+      category_id: req.body.category_id,
     };
 
     // Create the item

@@ -1,6 +1,7 @@
 // import { Link, useParams } from "react-router-dom";
 // import { Link, useParams } from "react-router-dom";
 import TaskCard from "../components/TaskCard";
+import "./BrowsePage.css";
 
 function BrowsePage() {
   //   const { id } = useParams();

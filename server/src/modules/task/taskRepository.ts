@@ -121,14 +121,14 @@ class TaskRepository {
   // }
 
   async readAll() {
-    // Execute the SQL SELECT query to retrieve all tasks from the "task" table
     const [rows] = await databaseClient.query<Rows>(`
-      SELECT task.*, user.firstname, user.lastname
+      SELECT task.*, user.firstname, user.lastname, category.name as category_name
       FROM task
       JOIN customer ON task.customer_id = customer.id
       JOIN user ON customer.user_id = user.id
+      JOIN category ON task.category_id = category.id
     `);
-    // Return the array of tasks
+
     return rows.map((row) => ({
       id: row.id,
       title: row.title,
@@ -138,6 +138,7 @@ class TaskRepository {
       status: row.status,
       selected_offer: row.selected_offer,
       category_id: row.category_id,
+      category_name: row.category_name, // Ajout du nom de la catégorie
       customer: {
         id: row.customer_id,
         user: {
