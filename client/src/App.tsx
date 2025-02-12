@@ -1,7 +1,10 @@
+import { Outlet } from "react-router-dom";
+import "./App.css";
+
 function App() {
   return (
     <>
-      <h1>Hello from the other side</h1>
+      <Outlet />
     </>
   );
 }
