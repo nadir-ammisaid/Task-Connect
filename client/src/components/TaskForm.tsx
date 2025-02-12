@@ -1,4 +1,5 @@
 import { type ReactNode, useEffect, useState } from "react";
+import "./TaskForm.css";
 
 type TaskData = {
   // firstname: string;
@@ -61,27 +62,14 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
           });
         }}
       >
-        {/* <input
-          id="firstname-id"
-          type="text"
-          name="firstname"
-          defaultValue={defaultValue.firstname}
-        />
-
-  
-
-        <input
-          id="lastname-id"
-          type="text"
-          name="lastname"
-          defaultValue={defaultValue.lastname}
-        /> */}
         <label htmlFor="title-id">Title:</label>
         <input
           id="title-id"
           type="text"
           name="title"
           defaultValue={defaultValue.title}
+          placeholder="Fix a leak in my faucet"
+          required
         />
 
         {/* */}
@@ -100,12 +88,13 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
           ))}
         </select>
 
-        <label htmlFor="description-id">Description:</label>
-        <input
+        <label htmlFor="description-id">Describe the task</label>
+        <textarea
           id="description-id"
-          type="text"
           name="description"
           defaultValue={defaultValue.description}
+          placeholder="Give details about your task so that the tasker could understand your needs."
+          required
         />
         <label htmlFor="location-id">Location:</label>
         <input
@@ -113,14 +102,9 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
           type="text"
           name="location"
           defaultValue={defaultValue.location}
+          placeholder="Villeurbanne 69100"
+          required
         />
-
-        {/* <input
-          id="status-id"
-          type="text"
-          name="status"
-          defaultValue={defaultValue.status}
-        /> */}
 
         <label htmlFor="image-upload">Upload an image:</label>
         <input

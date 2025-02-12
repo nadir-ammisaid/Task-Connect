@@ -30,7 +30,7 @@ CREATE TABLE category (
 
 CREATE TABLE task (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
+    title VARCHAR(100) NOT NULL,
     description TEXT NOT NULL,
     location VARCHAR(255),
     image VARCHAR(255),
@@ -96,7 +96,12 @@ INSERT INTO category (name) VALUES
 INSERT INTO task (title, description, location, image, status, customer_id, category_id) VALUES
 ('Réparer une étagère', 'Besoin d\'aide pour fixer une étagère dans le salon', 'Paris', NULL, 'open', 
     (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
+    (SELECT id FROM category WHERE name = 'DIY')),('Installation climatisation murale', 'Installation d\'une climatisation réversible dans le séjour, prévoir perçage du mur extérieur', 'Lyon', NULL, 'open', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
     (SELECT id FROM category WHERE name = 'DIY')),
+('Déménagement studio 30m²', 'Aide au déménagement d\'un studio au 2ème étage sans ascenseur, principalement des meubles et cartons', 'Nice', NULL, 'open', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
+    (SELECT id FROM category WHERE name = 'Moving')),
 ('Tondre la pelouse', 'Tonte complète du jardin', 'Marseille', NULL, 'assigned', 
     (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
     (SELECT id FROM category WHERE name = 'Gardening'));

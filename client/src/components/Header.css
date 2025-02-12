@@ -4,6 +4,21 @@
   box-sizing: 0;
 }
 
+#logoImageMobile {
+  height: 3.5rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+#logoImageMobile:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.2));
+}
+
+#logoImageDesktop {
+  display: none;
+}
+
 .navbarIcons {
   width: 2rem;
   transition: all 0.3s ease;
@@ -29,6 +44,21 @@
 /* version tablet/desktop */
 
 @media (min-width: 450px) {
+  #logoImageMobile {
+    display: none;
+  }
+
+  #logoImageDesktop {
+    height: 3.5rem;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  #logoImageDesktop:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.2));
+  }
+
   #headerContainer {
     display: flex;
     flex-direction: row;

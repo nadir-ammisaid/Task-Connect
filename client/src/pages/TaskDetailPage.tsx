@@ -52,7 +52,7 @@ function TaskDetailPage() {
                 Submit a request
               </button>
             </Link> */}
-            <h1>coucouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu</h1>
+            <h1>Task detail page</h1>
             <section id="taskDetailsContainer">
               <p>{task.status}</p>
               <h1>{task.title}</h1>

@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import "./TaskCard.css";
+import { Link } from "react-router-dom";
+import locationIcon from "../../src/assets/images/location-80-128.png";
+import timeIcon from "../../src/assets/images/tear-of-calendar-128.png";
 
 interface User {
   firstname: string;
@@ -35,25 +38,38 @@ function TaskCard() {
   }, []);
 
   return (
-    <>
+    <section className="cards-container">
       {tasks.map((task) => (
-        <div className="card" key={task.id}>
-          <h2 className="title-card">{task.title}</h2>
-          <p className="category">{task.category_name}</p>
-          <div className="time-info">
-            <p>Tomorrow, 11:00 — 13:00 (2h)</p>
-          </div>
-          <div className="card-footer">
-            <p className="location-info">{task.location}</p>
-          </div>
-          <div className="footer-card">
-            <p>
-              By {task.customer.user.firstname} {task.customer.user.lastname}
-            </p>
-          </div>
-        </div>
+        <Link to={`/browse/${task.id}`} key={task.id} className="card-link">
+          <article className="card" key={task.id}>
+            <header id="titleAndCategory">
+              <h2 className="title-card">{task.title}</h2>
+              <p className="category" data-type={task.category_name}>
+                {task.category_name}
+              </p>
+            </header>
+            <section id="time-info">
+              <img src={timeIcon} alt="time-icon" className="taskCardIcons" />
+              <p>Tomorrow, 11:00 — 13:00 (2h)</p>
+            </section>
+            <section id="location">
+              <img
+                src={locationIcon}
+                alt="location-icon"
+                className="taskCardIcons"
+              />
+              <p className="location-info">{task.location}</p>
+            </section>
+            <footer className="footer-card">
+              <p>
+                Posted by {task.customer.user.firstname}{" "}
+                {task.customer.user.lastname}
+              </p>
+            </footer>
+          </article>
+        </Link>
       ))}
-    </>
+    </section>
   );
 }
 
