@@ -8,13 +8,10 @@ const storage = multer.diskStorage({
     cb(null, "public/uploads/");
   },
   filename: (_req: Request, file: Express.Multer.File, cb) => {
-    const timestamp = new Date().toISOString().replace(/:/g, "-").split(".")[0];
-    const originalNameWithoutExt = path.basename(
-      file.originalname,
-      path.extname(file.originalname),
-    );
+    const timestamp = Date.now();
+    const uniqueId = uuidv4();
     const extension = path.extname(file.originalname);
-    cb(null, `task-${timestamp}-${originalNameWithoutExt}${extension}`);
+    cb(null, `task-${timestamp}-${uniqueId}${extension}`);
   },
 });
 
