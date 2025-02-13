@@ -1,6 +1,6 @@
 import "./Footer.css";
 import { NavLink } from "react-router-dom";
-import homeIcon from "../../src/assets/images/home-icon.png";
+import homeIcon from "../../src/assets/images/home-7-128.png";
 import myTasksIcon from "../../src/assets/images/list-2-128.png";
 import postATaskIcon from "../../src/assets/images/plus-5-128.png";
 import browseIcon from "../../src/assets/images/search-9-128.png";

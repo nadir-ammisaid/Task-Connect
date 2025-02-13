@@ -4,34 +4,14 @@
   font-family: "Roboto", sans-serif;
 }
 
-#header-landing {
-  margin: 0.5rem 0.6rem 0.5rem 0.6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* #logoImageMobileLanding {
-  height: 3.5rem;
-  display: block;
-} */
-
-/* #logoImageDesktop {
-  display: none;
-} */
-
-/* #bell-icon {
-  height: 3.7rem;
-} */
-
 #carousel {
   margin: 1rem 0 1rem 0;
 }
 
 #carousel-heading-text {
   text-align: center;
-  font-size: 5vw;
-  margin: 3vw;
+  font-size: 4vw;
+  margin: 2vh 23vw 5vh 23vw;
 }
 
 #mainsectionpage {
@@ -64,6 +44,12 @@
 
 #plusButton {
   width: clamp(5rem, 12vw, 12rem);
+  transition: all 0.3s ease;
+}
+
+#plusButton:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.2));
 }
 
 /* version tablet/desktop */
@@ -73,16 +59,7 @@
     display: none;
   }
 
-  /* #logoImageDesktop {
-    height: 5.0rem;
-    display: block;
-  } */
-
   #carousel {
     margin: 1rem 0 1rem 0;
   }
-
-  /* #bell-icon {
-    height: 5rem;
-  } */
 }

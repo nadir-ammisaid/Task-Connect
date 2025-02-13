@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import logoDesktop from "../../public/logoDesktop.png";
 import logoMobile from "../../public/logoMobile.png";
 import bell_icon from "../../src/assets/images/bell_icon.png";
-import homeIcon from "../../src/assets/images/home-icon.png";
+import homeIcon from "../../src/assets/images/home-7-128.png";
 import myTasksIcon from "../../src/assets/images/list-2-128.png";
 import postATaskIcon from "../../src/assets/images/plus-5-128.png";
 import browseIcon from "../../src/assets/images/search-9-128.png";
@@ -25,7 +25,7 @@ function Header() {
           Home
         </NavLink>
 
-        <NavLink to="/browse" className="navbarLinks">
+        <NavLink to="/browse" className="footerLinks">
           <img src={browseIcon} alt="browse-icon" className="navbarIcons" />
           Browse
         </NavLink>
