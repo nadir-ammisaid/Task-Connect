@@ -1,17 +1,15 @@
 #accountPageContainer {
   padding: 1rem;
-  /* background-color: #f5f5f5; */
   min-height: 100vh;
 }
-.profile-header h1 {
-  text-align: center;
-}
+
 .content-container {
   max-width: 600px;
   margin: 0 auto;
 }
 
 .profile-header h1 {
+  text-align: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -45,18 +43,18 @@
 }
 
 .edit-account {
-  width: 90%;
-  max-width: 400px;
   background-color: #207868;
   color: white;
   padding: 1rem;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
-  font-weight: 500;
-  text-align: center;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  width: 80%;
+  align-self: center;
+  text-decoration: underline;
+  text-decoration-color: #207868;
 }
 
 .account-details {

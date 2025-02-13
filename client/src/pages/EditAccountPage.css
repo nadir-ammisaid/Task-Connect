@@ -1,0 +1,128 @@
+#editAccountPageContainer {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.content-container h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Header */
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Profile Header */
+.profile-header-edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.user-info-edit h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.profile-avatar-edit {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+/* Form */
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-group input {
+  padding: 0.8rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input:disabled {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #207868;
+  box-shadow: 0 0 0 2px rgba(32, 120, 104, 0.1);
+}
+
+/* Save Button */
+.save-button {
+  background-color: #207868;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.save-button:hover {
+  background-color: #1a6557;
+}
+
+@media (min-width: 450px) {
+  #editAccountPageContainer {
+    padding: 2rem;
+  }
+
+  .content-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-avatar-edit {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .form-group input {
+    transition: all 0.2s ease;
+  }
+
+  .save-button {
+    transition: background-color 0.2s ease;
+  }
+}
