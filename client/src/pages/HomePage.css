@@ -1,0 +1,65 @@
+/* version mobile */
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+#carousel {
+  margin: 1rem 0 1rem 0;
+}
+
+#carousel-heading-text {
+  text-align: center;
+  font-size: 4vw;
+  margin: 2vh 23vw 5vh 23vw;
+}
+
+#mainsectionpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 2rem 0;
+}
+
+#startImpactingAndRequestImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem 2rem 2rem;
+  gap: 1rem;
+}
+
+#mainPageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+}
+
+#mainImage {
+  width: 100vw;
+}
+
+#plusButton {
+  width: clamp(5rem, 12vw, 12rem);
+  transition: all 0.3s ease;
+}
+
+#plusButton:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.2));
+}
+
+/* version tablet/desktop */
+
+@media (min-width: 450px) {
+  #logoImageMobileLanding {
+    display: none;
+  }
+
+  #carousel {
+    margin: 1rem 0 1rem 0;
+  }
+}

@@ -52,7 +52,7 @@ app.use(
 
 // Uncomment one or more of these options depending on the format of the data sent by your client:
 
-// app.use(express.json());
+app.use(express.json());
 // app.use(express.urlencoded());
 // app.use(express.text());
 // app.use(express.raw());
@@ -85,6 +85,9 @@ const publicFolderPath = path.join(__dirname, "../../server/public");
 if (fs.existsSync(publicFolderPath)) {
   app.use(express.static(publicFolderPath));
 }
+
+// !!!!!!!!!!!!!!! Configuration pour servir les fichiers statiques pour Multer
+app.use("/uploads", express.static("public/uploads"));
 
 // Serve client resources
 

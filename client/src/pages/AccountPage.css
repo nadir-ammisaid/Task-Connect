@@ -1,0 +1,137 @@
+#accountPageContainer {
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.content-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-header h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-main-info h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.profile-avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.button-container-account {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.edit-account {
+  background-color: #207868;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 80%;
+  align-self: center;
+  text-decoration: underline;
+  text-decoration-color: #207868;
+}
+
+.account-details {
+  margin-bottom: 2rem;
+}
+
+.detail-item {
+  margin-bottom: 1rem;
+}
+
+.detail-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.detail-item p {
+  font-size: 1rem;
+}
+
+.account-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-button {
+  width: 100%;
+  text-align: left;
+  padding: 0.8rem;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.option-button:hover {
+  background-color: #f0f0f0;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0.5rem 0;
+}
+
+.logout {
+  font-weight: bold;
+}
+
+.delete {
+  font-weight: bold;
+  color: #dc3545;
+}
+
+@media (min-width: 450px) {
+  #accountPageContainer {
+    padding: 2rem;
+  }
+
+  .content-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-avatar {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .option-button {
+    border-radius: 4px;
+  }
+
+  .option-button:hover {
+    background-color: #f8f9fa;
+  }
+}
