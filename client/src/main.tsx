@@ -9,6 +9,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import BrowsePage from "./pages/BrowsePage";
 import HomePage from "./pages/HomePage";
+import NotificationPage from "./pages/NotificationPage";
 import TaskDetailPage from "./pages/TaskDetailPage";
 import TaskNew from "./pages/TaskNewPage";
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "post-a-new-task",
         element: <TaskNew />,
+      },
+      {
+        path: "notifications",
+        element: <NotificationPage />,
       },
     ],
   },
