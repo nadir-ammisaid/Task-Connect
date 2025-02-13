@@ -9,6 +9,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import AccountPage from "./pages/AccountPage";
 import BrowsePage from "./pages/BrowsePage";
+import EditAccountPage from "./pages/EditAccountPage";
 import HomePage from "./pages/HomePage";
 import NotificationPage from "./pages/NotificationPage";
 import TaskDetailPage from "./pages/TaskDetailPage";
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "account",
         element: <AccountPage />,
+      },
+      {
+        path: "edit-account",
+        element: <EditAccountPage />,
       },
     ],
   },

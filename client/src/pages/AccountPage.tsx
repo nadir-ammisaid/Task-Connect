@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import userAvatar from "../../src/assets/images/user-128-2.png";
 import "./AccountPage.css";
+import { Link } from "react-router-dom";
 
 interface User {
   firstname: string;
@@ -43,11 +44,13 @@ function AccountPage() {
             <img src={userAvatar} alt="Profile" className="profile-avatar" />
           </div>
         </section>
-        <div className="button-container-account">
-          <button type="button" className="edit-account">
-            Edit my profile
-          </button>
-        </div>
+        <Link to="/edit-account">
+          <div className="button-container-account">
+            <button type="button" className="edit-account">
+              Edit my profile
+            </button>
+          </div>
+        </Link>
 
         <section className="account-details">
           <div className="detail-item">
