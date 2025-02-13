@@ -14,8 +14,8 @@
 }
 
 #taskform label {
-  color: #333;
-  font-size: 0.9rem;
+  color: black;
+  font-size: 1rem;
   margin-bottom: 0.25rem;
 }
 
@@ -110,6 +110,32 @@
   box-shadow: 0 0 0 2px rgba(32, 120, 104, 0.2);
 }
 
+#upload-icon {
+  width: 3rem;
+  cursor: pointer;
+}
+
+.upload-label {
+  align-self: center;
+}
+
+.image-preview {
+  margin-top: 1rem;
+  align-self: center;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.preview-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 @media (min-width: 450px) {
   #taskform {
     padding: 2rem;
@@ -120,5 +146,10 @@
     font-size: 1rem;
     background-color: white;
     color: #333;
+  }
+
+  #upload-icon {
+    width: 4rem;
+    cursor: pointer;
   }
 }

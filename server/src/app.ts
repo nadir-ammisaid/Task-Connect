@@ -86,7 +86,7 @@ if (fs.existsSync(publicFolderPath)) {
   app.use(express.static(publicFolderPath));
 }
 
-// Configuration pour servir les fichiers statiques pour Multer
+// !!!!!!!!!!!!!!! Configuration pour servir les fichiers statiques pour Multer
 app.use("/uploads", express.static("public/uploads"));
 
 // Serve client resources

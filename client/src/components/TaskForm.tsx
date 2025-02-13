@@ -26,6 +26,7 @@ interface TaskFormProps {
 function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
   const [categories, setCategories] = useState<Category[]>([]);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/categories`)
@@ -33,10 +34,22 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
       .then((data) => setCategories(data))
       .catch((error) => console.error("Erreur lors du fetch :", error));
   }, []);
+  // Nettoyage de l'URL lors du démontage du composant
+  useEffect(() => {
+    return () => {
+      if (previewUrl) {
+        URL.revokeObjectURL(previewUrl);
+      }
+    };
+  }, [previewUrl]);
 
+  // Modification du handleFileChange pour inclure la prévisualisation
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files?.[0]) {
       setSelectedFile(e.target.files[0]);
+      // Créer l'URL de prévisualisation
+      const objectUrl = URL.createObjectURL(e.target.files[0]);
+      setPreviewUrl(objectUrl);
     }
   };
   return (
@@ -110,7 +123,7 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
           required
         />
 
-        <label htmlFor="image-upload">Upload an image:</label>
+        {/* <label htmlFor="image-upload">Upload an image:</label>
         <input
           type="file"
           id="image-upload"
@@ -118,7 +131,31 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
           accept="image/*"
           onChange={handleFileChange}
           // defaultValue={defaultValue.image}
+          /> */}
+
+        <p>Upload an image:</p>
+        <label htmlFor="image-upload" className="upload-label">
+          <img
+            src="../../src/assets/images/upload-3-128.png"
+            alt="upload"
+            id="upload-icon"
+          />
+        </label>
+        <input
+          type="file"
+          id="image-upload"
+          name="image"
+          accept="image/*"
+          onChange={handleFileChange}
+          className="hidden-input"
+          hidden
         />
+
+        {previewUrl && (
+          <div className="image-preview">
+            <img src={previewUrl} alt="Preview" className="preview-image" />
+          </div>
+        )}
 
         <button type="submit">{children}</button>
       </form>
