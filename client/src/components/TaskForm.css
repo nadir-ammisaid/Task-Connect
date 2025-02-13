@@ -29,7 +29,6 @@
   width: 100%;
   box-sizing: border-box;
   background-color: white;
-  font-family: inherit; /* Garde la même police que le reste */
 }
 
 /* Style du select et de ses options */
@@ -65,7 +64,7 @@
 
 #taskform textarea {
   min-height: 100px;
-  resize: vertical; /* Permet seulement le redimensionnement vertical */
+  resize: vertical;
 }
 
 #taskform input[type="text"],
@@ -94,7 +93,8 @@
   font-size: 1rem;
   cursor: pointer;
   margin-top: 1rem;
-  width: 100%;
+  width: 80%;
+  align-self: center;
 }
 
 #taskform button[type="submit"]:hover {
@@ -113,5 +113,12 @@
 @media (min-width: 450px) {
   #taskform {
     padding: 2rem;
+  }
+
+  #taskform select option {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: white;
+    color: #333;
   }
 }
