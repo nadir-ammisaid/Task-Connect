@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
+import AccountPage from "./pages/AccountPage";
 import BrowsePage from "./pages/BrowsePage";
 import HomePage from "./pages/HomePage";
 import NotificationPage from "./pages/NotificationPage";
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "notifications",
         element: <NotificationPage />,
+      },
+      {
+        path: "account",
+        element: <AccountPage />,
       },
     ],
   },

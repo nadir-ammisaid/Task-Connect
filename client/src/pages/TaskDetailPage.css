@@ -143,6 +143,21 @@
   background-color: #1a6557;
 }
 
+.no-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.no-image-message {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
 @media (min-width: 450px) {
   #mainDetailPage {
     padding: 2rem;

@@ -98,7 +98,9 @@ function TaskDetailPage() {
                     />
                   </div>
                 ) : (
-                  <p>No image</p>
+                  <div className="no-image-container">
+                    <p className="no-image-message">No image</p>
+                  </div>
                 )}
 
                 <div className="offers-section">

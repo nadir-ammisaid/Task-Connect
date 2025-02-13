@@ -71,6 +71,7 @@ CREATE TABLE review (
 );
 
 -- Insertions des données de test
+
 INSERT INTO user (firstname, lastname, email, role, password, average_rating, total_reviews) VALUES
 ('John', 'Doe', 'john.doe@example.com', 'customer', '$2b$10$fakeHashedPassword1', 4.5, 3),
 ('Jane', 'Smith', 'jane.smith@example.com', 'tasker', '$2b$10$fakeHashedPassword2', 4.8, 5),
@@ -94,26 +95,58 @@ INSERT INTO category (name) VALUES
 ('Other');
 
 INSERT INTO task (title, description, location, image, status, customer_id, category_id) VALUES
-('Réparer une étagère', 'Besoin d\'aide pour fixer une étagère dans le salon', 'Paris', NULL, 'open', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
-    (SELECT id FROM category WHERE name = 'DIY')),('Installation climatisation murale', 'Installation d\'une climatisation réversible dans le séjour, prévoir perçage du mur extérieur', 'Lyon', NULL, 'open', 
+('Kitchen furniture installation', 'Need help installing a complete IKEA kitchen in a 70m² apartment. The kitchen includes wall and base units, a worktop, a sink and built-in appliances. Furniture is already on site. Please bring necessary tools. Estimated work time: full day.', 'Villeurbanne - 69100', NULL, 'open', 
     (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
     (SELECT id FROM category WHERE name = 'DIY')),
-('Déménagement studio 30m²', 'Aide au déménagement d\'un studio au 2ème étage sans ascenseur, principalement des meubles et cartons', 'Nice', NULL, 'open', 
+
+('Deep house cleaning', 'Deep cleaning of an 85m² apartment before moving out. 4 rooms + kitchen and bathroom. Includes window cleaning, floor cleaning, bathroom sanitizing and descaling. Products and equipment must be provided by the service provider.', 'Vénissieux - 69200', NULL, 'open', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
+    (SELECT id FROM category WHERE name = 'Cleaning')),
+
+('Garden maintenance and hedge trimming', 'Large garden requiring 25-meter hedge trimming, 200m² lawn mowing, and flower bed weeding. Equipment can be provided on site. Estimated work: full day job. Garden is well maintained, just needs regular upkeep.', 'Caluire-et-Cuire - 69300', NULL, 'open', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
+    (SELECT id FROM category WHERE name = 'Gardening')),
+
+('House moving 120m²', 'Moving a family house to another location 15km away. Furniture to be dismantled and reassembled, about 50 boxes to transport. 20m3 truck needed. Easy access on both sides, no stairs. Need help with packing and unpacking.', 'Bron - 69500', NULL, 'assigned', 
     (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
     (SELECT id FROM category WHERE name = 'Moving')),
-('Tondre la pelouse', 'Tonte complète du jardin', 'Marseille', NULL, 'assigned', 
+
+('Bathroom leak repair', 'Leak in shower joint causing infiltration. Requires replacement of silicone joint and potentially part of the wall tiling (2-3 tiles). Urgent intervention needed. Bathroom is on first floor, easy access.', 'Vaulx-en-Velin - 69120', NULL, 'open', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
+    (SELECT id FROM category WHERE name = 'DIY')),
+
+('Electric awning installation', 'Installation of two electric awnings on a terrace. Awnings already purchased (Somfy), surface 4m x 3m each. Requires drilling in facade and electrical connection. Height: 2.5m. Professional experience required.', 'Écully - 69130', NULL, 'open', 
     (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
-    (SELECT id FROM category WHERE name = 'Gardening'));
+    (SELECT id FROM category WHERE name = 'DIY')),
+
+('Student studio renovation', 'Complete cleaning of a 25m² student studio after 2 years of rental. Includes wall washing, window cleaning, bathroom descaling, kitchen degreasing. Minor repairs expected. All cleaning supplies must be provided.', 'Oullins - 69600', NULL, 'open', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
+    (SELECT id FROM category WHERE name = 'Cleaning')),
+
+('Flower bed creation', 'Creation of a 15m² flower bed: soil preparation, planting perennials and shrubs, installation of automatic watering system. Plants will be provided. Ground already cleared. Looking for someone with gardening experience.', 'Saint-Priest - 69800', NULL, 'assigned', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
+    (SELECT id FROM category WHERE name = 'Gardening')),
+
+('Wardrobe furniture assembly', 'Assembly of several IKEA PAX wardrobe units: 3 wardrobes with sliding doors, interior shelves and drawers. Total dimensions: 3.5m wide x 2.4m high. Furniture already on site. Experience with IKEA furniture required.', 'Tassin-la-Demi-Lune - 69160', NULL, 'open', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
+    (SELECT id FROM category WHERE name = 'DIY')),
+
+('Urgent moving help needed', 'Urgent move from a 2-bedroom apartment on 4th floor without elevator to a 1-bedroom on 2nd floor with elevator. About 30 boxes and some furniture to dismantle/reassemble. 5km distance. Minimum 2 people needed.', 'Décines-Charpieu - 69150', NULL, 'open', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
+    (SELECT id FROM category WHERE name = 'Moving'));
 
 INSERT INTO offer (price, currency, comment, tasker_id, task_id, status) VALUES
-(50.00, 'EUR', 'Je peux le faire rapidement', 
+(150.00, 'EUR', 'I can do this quickly, I have experience with IKEA kitchens', 
     (SELECT id FROM tasker WHERE user_id = (SELECT id FROM user WHERE email = 'jane.smith@example.com')), 
-    (SELECT id FROM task WHERE title = 'Réparer une étagère'), 
+    1,
     'pending'),
-(80.00, 'EUR', 'Expertise garantie', 
+(180.00, 'EUR', 'Professional experience, all tools provided', 
     (SELECT id FROM tasker WHERE user_id = (SELECT id FROM user WHERE email = 'david.brown@example.com')), 
-    (SELECT id FROM task WHERE title = 'Réparer une étagère'), 
+    1,
+    'pending'),
+(120.00, 'EUR', 'Available immediately, 5 years of experience', 
+    (SELECT id FROM tasker WHERE user_id = (SELECT id FROM user WHERE email = 'jane.smith@example.com')), 
+    2,
     'pending');
 
 INSERT INTO review (rating, comment, reviewer_id, reviewee_id) VALUES
