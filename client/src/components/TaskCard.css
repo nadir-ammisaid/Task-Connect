@@ -1,10 +1,8 @@
-/* Style général de la page */
 #BrowsePageContainer {
   padding: 1rem;
   background-color: #e0e0e0;
 }
 
-/* Titre principal */
 #BrowsePageContainer h1 {
   font-size: 1.5rem;
   text-align: center;
@@ -17,7 +15,6 @@
   display: contents;
 }
 
-/* Conteneur des cartes */
 .cards-container {
   display: flex;
   flex-direction: column;
@@ -25,7 +22,6 @@
   width: 100%;
 }
 
-/* Style de la carte individuelle */
 .card {
   background-color: white;
   border-radius: 0.75rem;
@@ -43,20 +39,19 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Titre de la carte */
 .title-card {
   font-size: 1.3rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 0.25rem;
-  overflow-wrap: break-word; /* Permet au texte de se couper sur plusieurs lignes */
-  word-wrap: break-word; /* Pour une meilleure compatibilité navigateur */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis; /* Ajoute ... à la fin si le texte est tronqué */
+  text-overflow: ellipsis;
 }
 
 #titleAndCategory {
@@ -66,40 +61,35 @@
   align-items: baseline;
 }
 
-/* Style pour la catégorie */
 .category {
   width: fit-content;
   font-size: 0.9rem;
   color: black;
   padding: 0.2rem 0.5rem;
   border-radius: 20px;
-  /* background-color: green;
-  opacity: 0.3; */
-  /* background-color: rgba(0, 128, 0, 0.4); */
   margin: 0;
 }
 
 .category[data-type="DIY"] {
-  background-color: rgba(255, 87, 51, 0.2); /* Rouge-orangé */
+  background-color: rgba(255, 87, 51, 0.2);
 }
 
 .category[data-type="Gardening"] {
-  background-color: rgba(76, 175, 80, 0.2); /* Vert */
+  background-color: rgba(76, 175, 80, 0.2);
 }
 
 .category[data-type="Moving"] {
-  background-color: rgba(33, 150, 243, 0.2); /* Bleu */
+  background-color: rgba(33, 150, 243, 0.2);
 }
 
 .category[data-type="Cleaning"] {
-  background-color: rgba(156, 39, 176, 0.2); /* Violet */
+  background-color: rgba(156, 39, 176, 0.2);
 }
 
 .category[data-type="Other"] {
-  background-color: rgba(158, 158, 158, 0.2); /* Gris */
+  background-color: rgba(158, 158, 158, 0.2);
 }
 
-/* Style pour les informations de temps */
 #time-info,
 #location {
   font-size: 0.9rem;
@@ -111,7 +101,6 @@
   gap: 1rem;
 }
 
-/* Style pour la localisation */
 .card-footer {
   margin-top: 0.5rem;
   display: flex;
@@ -123,9 +112,7 @@
   width: 2rem;
 }
 
-/* Style pour les informations de l'utilisateur */
 .footer-card {
-  /* margin-top: 0.5rem; */
   border-top: 1px solid #e0e0e0;
   padding-top: 1rem;
 }
@@ -134,8 +121,6 @@
   font-size: 0.9rem;
   color: black;
 }
-
-/* Version desktop */
 
 @media (min-width: 450px) {
   #BrowsePageContainer {
@@ -147,14 +132,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-    /* padding-left: 1rem; */
-    /* padding-right: 1rem; */
   }
 
   .card {
-    width: calc(45% - 0.5rem); /* Pour avoir 2 cartes par ligne avec un espace entre elles */
-    min-width: 300px; /* Largeur minimale pour éviter des cartes trop étroites */
-    /* margin-bottom: 1rem; */
+    width: calc(45% - 0.5rem);
+    min-width: 300px;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }

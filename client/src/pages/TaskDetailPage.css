@@ -1,0 +1,261 @@
+#mainDetailPage {
+  padding: 0.5rem;
+  background-color: white;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.status-badge {
+  background-color: #00de8c;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+}
+
+.titleDetailPage {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.poster-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.poster-info {
+  font-size: 1rem;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.avatar-icon-detail {
+  width: 5.0rem;
+}
+
+.time-icon-detail {
+  width: 2.1rem;
+}
+
+.location-icon-detail {
+  width: 2.1rem;
+}
+
+.avatar-icon-detail-tasker {
+  width: 2.1rem;
+}
+
+.description-section {
+  margin: 1.5rem auto;
+  border-top: 0.7rem solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding-top: 1rem;
+  max-width: 800px;
+}
+
+.description-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.description-section p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.task-image {
+  width: 80%;
+  border-radius: 8px;
+}
+
+.offers-section {
+  margin-top: 1.5rem;
+  border-top: 0.7rem solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding-top: 1rem;
+}
+
+.offer-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.offer-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.offer-price {
+  font-weight: bold;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.make-offer-button {
+  width: 90%;
+  max-width: 400px;
+  background-color: #207868;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.make-offer-button:hover {
+  background-color: #1a6557;
+}
+
+@media (min-width: 450px) {
+  #mainDetailPage {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .status-badge {
+    font-size: 0.9rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .titleDetailPage {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-row {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .avatar-icon-detail {
+    width: 6rem;
+  }
+
+  .time-icon-detail,
+  .location-icon-detail,
+  .avatar-icon-detail-tasker {
+    width: 2.5rem;
+  }
+
+  .description-section {
+    padding: 1.5rem 2rem;
+    margin: 2rem auto;
+    border-radius: 15px;
+  }
+
+  .description-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .description-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .task-image {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .offers-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 15px;
+    padding: 1.5rem;
+  }
+
+  .offer-item {
+    padding: 1rem;
+    transition: background-color 0.2s ease;
+  }
+
+  .offer-item:hover {
+    background-color: #f8f9fa;
+  }
+
+  .offer-price {
+    font-size: 1.2rem;
+  }
+
+  .button-container {
+    padding: 2rem;
+  }
+
+  .make-offer-button {
+    width: 400px;
+    margin: 2rem auto;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+  }
+
+  .make-offer-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (min-width: 1200px) {
+  #mainDetailPage {
+    padding: 3rem;
+  }
+
+  .content-container {
+    max-width: 1200px;
+  }
+
+  .task-image {
+    max-width: 400px;
+  }
+}
