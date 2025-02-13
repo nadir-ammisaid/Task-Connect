@@ -1,4 +1,4 @@
-import { type ReactNode, useEffect, useState } from "react";
+import { type ChangeEvent, type ReactNode, useEffect, useState } from "react";
 import "./TaskForm.css";
 
 type TaskData = {
@@ -7,7 +7,7 @@ type TaskData = {
   title: string;
   description: string;
   location: string;
-  image: string;
+  image: File | null;
   category_id: number;
   // status: string;
 };
@@ -25,6 +25,7 @@ interface TaskFormProps {
 
 function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
   const [categories, setCategories] = useState<Category[]>([]);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/categories`)
@@ -32,27 +33,30 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
       .then((data) => setCategories(data))
       .catch((error) => console.error("Erreur lors du fetch :", error));
   }, []);
+
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files?.[0]) {
+      setSelectedFile(e.target.files[0]);
+    }
+  };
   return (
     <>
       <form
         id="taskform"
+        encType="multipart/form-data"
         onSubmit={(event) => {
           event.preventDefault();
 
           const formData = new FormData(event.currentTarget);
 
-          // const firstname = formData.get("firstname") as string;
-          // const lastname = formData.get("lastname") as string;
           const title = formData.get("title") as string;
           const description = formData.get("description") as string;
           const location = formData.get("location") as string;
-          const image = formData.get("image") as string;
+          const image = selectedFile;
           const category_id = Number(formData.get("category_id"));
           // const status = formData.get("status") as string;
 
           onSubmit({
-            // firstname,
-            // lastname,
             title,
             description,
             location,
@@ -108,11 +112,12 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
 
         <label htmlFor="image-upload">Upload an image:</label>
         <input
-          type="texte"
+          type="file"
           id="image-upload"
           name="image"
           accept="image/*"
-          defaultValue={defaultValue.image}
+          onChange={handleFileChange}
+          // defaultValue={defaultValue.image}
         />
 
         <button type="submit">{children}</button>

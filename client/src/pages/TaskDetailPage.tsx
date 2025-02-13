@@ -64,7 +64,17 @@ function TaskDetailPage() {
               <h2>Task description:</h2>
               <p>{task.description}</p>
               {task.image ? (
-                <img src={task.image} alt="task_photo" id="task_photo" />
+                <img
+                  src={`${import.meta.env.VITE_API_URL}/${task.image}`}
+                  alt="task_photo"
+                  id="task_photo"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    borderRadius: "8px",
+                    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                  }}
+                />
               ) : (
                 <p>No image</p>
               )}

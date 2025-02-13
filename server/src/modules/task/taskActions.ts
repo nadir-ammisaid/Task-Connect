@@ -1,4 +1,5 @@
 import type { RequestHandler } from "express";
+import type { MulterRequest } from "../../types/multer";
 
 // Import access to data
 import taskRepository from "./taskRepository";
@@ -40,12 +41,17 @@ const read: RequestHandler = async (req, res, next) => {
 // The A of BREAD - Add (Create) operation
 const add: RequestHandler = async (req, res, next) => {
   try {
+    const multerReq = req as MulterRequest;
+    const imagePath = multerReq.file
+      ? `/uploads/${multerReq.file.filename}`
+      : null;
+
     // Extract the item data from the request body
     const newTask = {
       title: req.body.title,
       description: req.body.description,
       location: req.body.location,
-      image: req.body.image || null,
+      image: imagePath,
       status: "open" as const,
       customer_id: 1, // Temporary
       category_id: req.body.category_id,
@@ -55,7 +61,7 @@ const add: RequestHandler = async (req, res, next) => {
     const insertId = await taskRepository.create(newTask);
 
     // Respond with HTTP 201 (Created) and the ID of the newly inserted item
-    res.status(201).json({ insertId });
+    res.status(201).json({ insertId, imagePath });
   } catch (err) {
     // Pass any errors to the error-handling middleware
     next(err);

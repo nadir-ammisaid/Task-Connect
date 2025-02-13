@@ -1,4 +1,5 @@
 import express from "express";
+import { upload } from "./config/multerConfig";
 
 const router = express.Router();
 
@@ -12,7 +13,7 @@ import taskActions from "./modules/task/taskActions";
 
 router.get("/api/tasks", taskActions.browse);
 router.get("/api/tasks/:id", taskActions.read);
-router.post("/api/tasks", taskActions.add);
+router.post("/api/tasks", upload.single("image"), taskActions.add);
 
 router.get("/api/categories", categoryActions.browse);
 
