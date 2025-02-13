@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import locationIcon from "../../src/assets/images/location-80-128.png";
+import timeIcon from "../../src/assets/images/tear-of-calendar-128.png";
+import userAvatar from "../../src/assets/images/user-128-2.png";
+import "./TaskDetailPage.css";
 
 interface User {
   firstname: string;
@@ -20,6 +24,7 @@ interface Task {
   status: string;
   selected_offer: number | null;
   category_id: string;
+  category_name: string;
   customer: Customer;
 }
 
@@ -46,39 +51,98 @@ function TaskDetailPage() {
     <>
       {task && (
         <div>
-          <main id="mainHome">
-            {/* <Link to={"/post_request"}>
-              <button id="button" type="button">
-                Submit a request
-              </button>
-            </Link> */}
-            <h1>Task detail page</h1>
-            <section id="taskDetailsContainer">
-              <p>{task.status}</p>
-              <h1>{task.title}</h1>
-              <p>
-                Posted by {task.customer.user.firstname}{" "}
-                {task.customer.user.lastname}
-              </p>
-              <p>{task.location}</p>
-              <h2>Task description:</h2>
-              <p>{task.description}</p>
-              {task.image ? (
-                <img
-                  src={`${import.meta.env.VITE_API_URL}/${task.image}`}
-                  alt="task_photo"
-                  id="task_photo"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                    borderRadius: "8px",
-                    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-                  }}
-                />
-              ) : (
-                <p>No image</p>
-              )}
-            </section>
+          <main id="mainDetailPage">
+            <div className="content-container">
+              <main id="mainDetailPage">
+                <div className="status-badge">{task.status}</div>
+                <h1 className="titleDetailPage">{task.title}</h1>
+
+                <div className="info-row">
+                  <img
+                    src={userAvatar}
+                    alt="user avatar"
+                    className="avatar-icon-detail"
+                  />
+                  <div className="poster-info">
+                    Posted by
+                    <br />
+                    {task.customer.user.firstname} {task.customer.user.lastname}
+                  </div>
+                </div>
+
+                <div className="info-row">
+                  <img src={timeIcon} alt="time" className="time-icon-detail" />
+                  <span>Tomorrow, 11:00 — 13:00 (2h)</span>
+                </div>
+
+                <div className="info-row">
+                  <img
+                    src={locationIcon}
+                    alt="location"
+                    className="location-icon-detail"
+                  />
+                  <span>{task.location}</span>
+                </div>
+
+                <div className="description-section">
+                  <h2>Task description</h2>
+                  <p>{task.description}</p>
+                </div>
+
+                {task.image ? (
+                  <div className="image-container">
+                    <img
+                      src={`${import.meta.env.VITE_API_URL}/${task.image}`}
+                      alt="task"
+                      className="task-image"
+                    />
+                  </div>
+                ) : (
+                  <p>No image</p>
+                )}
+
+                <div className="offers-section">
+                  <div className="offer-item">
+                    <div className="offer-user">
+                      <img
+                        src={userAvatar}
+                        alt="user"
+                        className="avatar-icon-detail-tasker"
+                      />
+                      <span>Jessica.J ⭐4,8(24)</span>
+                    </div>
+                    <span className="offer-price">160,00 €</span>
+                  </div>
+                  <div className="offer-item">
+                    <div className="offer-user">
+                      <img
+                        src={userAvatar}
+                        alt="user"
+                        className="avatar-icon-detail-tasker"
+                      />
+                      <span>David.K ⭐3,9(8)</span>
+                    </div>
+                    <span className="offer-price">99,00 €</span>
+                  </div>
+                  <div className="offer-item">
+                    <div className="offer-user">
+                      <img
+                        src={userAvatar}
+                        alt="user"
+                        className="avatar-icon-detail-tasker"
+                      />
+                      <span>Matthieu.L ⭐5,0(1)</span>
+                    </div>
+                    <span className="offer-price">120,00 €</span>
+                  </div>
+                </div>
+                <div className="button-container">
+                  <button type="button" className="make-offer-button">
+                    Make an offer
+                  </button>
+                </div>
+              </main>
+            </div>
           </main>
         </div>
       )}
