@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import mainImage from "../../public/mainImage.jpg";
+import mainImageHome from "../../public/mainImageHome.jpg";
 import plusButton from "../../src/assets/images/Plus_square_button.png";
 import "./HomePage.css";
 
@@ -9,7 +9,11 @@ function HomePage() {
       <section id="mainPageContainer">
         <section id="mainsectionpage">
           <div id="carousel">
-            <img src={mainImage} alt="workers-illustration" id="mainImage" />
+            <img
+              src={mainImageHome}
+              alt="workers-illustration"
+              id="mainImageHome"
+            />
           </div>
           <div id="textSection">
             <h1 id="carousel-heading-text">

@@ -13,6 +13,7 @@ import EditAccountPage from "./pages/EditAccountPage";
 import HomePage from "./pages/HomePage";
 import NotificationPage from "./pages/NotificationPage";
 import TaskDetailPage from "./pages/TaskDetailPage";
+import TaskEdit from "./pages/TaskEditPage";
 import TaskNew from "./pages/TaskNewPage";
 
 // Import additional components for new routes
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "browse/:id",
         element: <TaskDetailPage />,
+      },
+      {
+        path: "browse/:id/edit",
+        element: <TaskEdit />,
       },
       {
         path: "post-a-new-task",
