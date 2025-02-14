@@ -38,6 +38,34 @@ const read: RequestHandler = async (req, res, next) => {
   }
 };
 
+// The E of BREAD - Edit (Update) operation
+
+const edit: RequestHandler = async (req, res, next) => {
+  try {
+    // Update a specific category based on the provided ID
+    const task = {
+      id: Number(req.params.id),
+      title: req.body.title,
+      description: req.body.description,
+      location: req.body.location,
+      category_id: Number(req.body.category_id),
+    };
+
+    const affectedRows = await taskRepository.update(task);
+
+    // If the category is not found, respond with HTTP 404 (Not Found)
+    // Otherwise, respond with the category in JSON format
+    if (affectedRows === 0) {
+      res.sendStatus(404);
+    } else {
+      res.sendStatus(204);
+    }
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
 // The A of BREAD - Add (Create) operation
 const add: RequestHandler = async (req, res, next) => {
   try {
@@ -68,4 +96,4 @@ const add: RequestHandler = async (req, res, next) => {
   }
 };
 
-export default { browse, read, add };
+export default { browse, read, add, edit };

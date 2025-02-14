@@ -160,9 +160,21 @@ class TaskRepository {
   // The U of CRUD - Update operation
   // TODO: Implement the update operation to modify an existing item
 
-  // async update(item: Item) {
-  //   ...
-  // }
+  async update(
+    task: Pick<
+      Task,
+      "id" | "title" | "description" | "location" | "category_id"
+    >,
+  ) {
+    // Execute the SQL UPDATE query to update an existing category in the "category" table
+    const [result] = await databaseClient.query<Result>(
+      "update task set title = ?, description = ?, location = ?, category_id = ? where id = ?",
+      [task.title, task.description, task.location, task.category_id, task.id],
+    );
+
+    // Return how many rows were affected
+    return result.affectedRows;
+  }
 
   // The D of CRUD - Delete operation
   // TODO: Implement the delete operation to remove an item by its ID

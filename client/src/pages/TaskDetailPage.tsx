@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import defaultTaskImage from "../../src/assets/images/default-task.png";
 import locationIcon from "../../src/assets/images/location-80-128.png";
 import timeIcon from "../../src/assets/images/tear-of-calendar-128.png";
 import userAvatar from "../../src/assets/images/user-128-2.png";
@@ -32,6 +33,14 @@ function TaskDetailPage() {
   const { id } = useParams();
 
   const [task, setTask] = useState(null as null | Task);
+
+  // const handleEditProfile = () => {
+  //   if (task?.id) {
+  //     Navigate(`/browse/${task.id}/edit`);
+  //   } else {
+  //     alert("Task ID not found");
+  //   }
+  // };
 
   // const taskId = Number(id);
 
@@ -89,20 +98,23 @@ function TaskDetailPage() {
                   <p>{task.description}</p>
                 </div>
 
-                {task.image ? (
-                  <div className="image-container">
-                    <img
-                      src={`${import.meta.env.VITE_API_URL}/${task.image}`}
-                      alt="task"
-                      className="task-image"
-                    />
-                  </div>
-                ) : (
-                  <div className="no-image-container">
-                    <p className="no-image-message">No image</p>
-                  </div>
-                )}
+                <div className="image-container">
+                  <img
+                    src={
+                      task.image
+                        ? `${import.meta.env.VITE_API_URL}/${task.image}`
+                        : defaultTaskImage
+                    }
+                    alt={task.image ? "task" : "default task image"}
+                    className="task-image"
+                  />
+                </div>
 
+                <div className="button-container">
+                  <Link to={`/browse/${task.id}/edit`} className="edit-my-task">
+                    Edit my task
+                  </Link>
+                </div>
                 <div className="offers-section">
                   <div className="offer-item">
                     <div className="offer-user">
