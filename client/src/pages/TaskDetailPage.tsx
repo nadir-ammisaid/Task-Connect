@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom"; // Added useNavigate
 import defaultTaskImage from "../../src/assets/images/default-task.png";
 import locationIcon from "../../src/assets/images/location-80-128.png";
 import timeIcon from "../../src/assets/images/tear-of-calendar-128.png";
 import userAvatar from "../../src/assets/images/user-128-2.png";
 import "./TaskDetailPage.css";
+import TaskDeleteForm from "../components/TaskDeleteForm"; // Added import
 
 interface User {
   firstname: string;
@@ -31,30 +32,35 @@ interface Task {
 
 function TaskDetailPage() {
   const { id } = useParams();
-
+  const navigate = useNavigate(); // Added navigate hook
   const [task, setTask] = useState(null as null | Task);
-
-  // const handleEditProfile = () => {
-  //   if (task?.id) {
-  //     Navigate(`/browse/${task.id}/edit`);
-  //   } else {
-  //     alert("Task ID not found");
-  //   }
-  // };
-
-  // const taskId = Number(id);
+  const [showDeleteForm, setShowDeleteForm] = useState(false); // Added state for delete form
 
   useEffect(() => {
-    // fetch(`${import.meta.env.VITE_API_URL}/api/tasks/${task?.id}`)
     fetch(`${import.meta.env.VITE_API_URL}/api/tasks/${id}`)
-      // fetch(`${import.meta.env.VITE_API_URL}/api/tasks/${taskId}`)
       .then((response) => response.json())
       .then((data) => {
         setTask(data);
       })
       .catch((error) => console.error("Error while fetching :", error));
-    // }, [task?.id]);
   }, [id]);
+
+  // Added function to handle task deletion
+  const handleDeleteTask = () => {
+    if (!task) return;
+
+    fetch(`${import.meta.env.VITE_API_URL}/api/tasks/${task.id}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (response.ok) {
+          navigate("/browse"); // Redirect to task list after successful deletion
+        } else {
+          throw new Error("Failed to delete task");
+        }
+      })
+      .catch((error) => console.error("Error:", error));
+  };
 
   return (
     <>
@@ -114,7 +120,22 @@ function TaskDetailPage() {
                   <Link to={`/browse/${task.id}/edit`} className="edit-my-task">
                     Edit my task
                   </Link>
+                  <button
+                    type="button"
+                    className="delete-my-task"
+                    onClick={() => setShowDeleteForm(true)}
+                  >
+                    Delete my task
+                  </button>
                 </div>
+
+                {showDeleteForm && (
+                  <TaskDeleteForm
+                    onConfirm={handleDeleteTask}
+                    onCancel={() => setShowDeleteForm(false)}
+                  />
+                )}
+
                 <div className="offers-section">
                   <div className="offer-item">
                     <div className="offer-user">

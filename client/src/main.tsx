@@ -11,6 +11,7 @@ import AccountPage from "./pages/AccountPage";
 import BrowsePage from "./pages/BrowsePage";
 import EditAccountPage from "./pages/EditAccountPage";
 import HomePage from "./pages/HomePage";
+import MyTasksPage from "./pages/MyTasksPage";
 import NotificationPage from "./pages/NotificationPage";
 import TaskDetailPage from "./pages/TaskDetailPage";
 import TaskEdit from "./pages/TaskEditPage";
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "notifications",
         element: <NotificationPage />,
+      },
+      {
+        path: "my-tasks",
+        element: <MyTasksPage />,
       },
       {
         path: "account",

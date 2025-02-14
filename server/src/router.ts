@@ -14,6 +14,7 @@ import taskActions from "./modules/task/taskActions";
 router.get("/api/tasks", taskActions.browse);
 router.get("/api/tasks/:id", taskActions.read);
 router.put("/api/tasks/:id", taskActions.edit);
+router.delete("/api/tasks/:id", taskActions.destroy);
 router.post("/api/tasks", upload.single("image"), taskActions.add);
 
 router.get("/api/categories", categoryActions.browse);
