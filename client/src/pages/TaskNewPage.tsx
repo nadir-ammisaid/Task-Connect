@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import TaskForm from "../components/TaskForm";
 import "./TaskNewPage.css";
+import fetchWithAccessToken from "../FetchWithAccessToken";
 
 interface TaskFormData {
   title: string;
@@ -36,7 +37,7 @@ function TaskNew() {
             formData.append("image", taskData.image);
           }
 
-          fetch(`${import.meta.env.VITE_API_URL}/api/tasks`, {
+          fetchWithAccessToken(`${import.meta.env.VITE_API_URL}/api/tasks`, {
             method: "post",
             body: formData,
           })
@@ -45,6 +46,16 @@ function TaskNew() {
               navigate(`/browse/${data.insertId}`);
             })
             .catch((error) => console.error("Error:", error));
+
+          // fetch(`${import.meta.env.VITE_API_URL}/api/tasks`, {
+          //   method: "post",
+          //   body: formData,
+          // })
+          //   .then((response) => response.json())
+          //   .then((data) => {
+          //     navigate(`/browse/${data.insertId}`);
+          //   })
+          //   .catch((error) => console.error("Error:", error));
         }}
       >
         Submit

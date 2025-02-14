@@ -14,6 +14,8 @@ import HomePage from "./pages/HomePage";
 import NotificationPage from "./pages/NotificationPage";
 import TaskDetailPage from "./pages/TaskDetailPage";
 import TaskNew from "./pages/TaskNewPage";
+import SignupPage from "./components/SignupComponent";
+import LoginPage from "./components/LoginComponent";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -57,6 +59,14 @@ const router = createBrowserRouter([
       {
         path: "edit-account",
         element: <EditAccountPage />,
+      },
+      {
+        path: "signup",
+        element: <SignupPage />,
+      },
+      {
+        path: "login",
+        element: <LoginPage />,
       },
     ],
   },
