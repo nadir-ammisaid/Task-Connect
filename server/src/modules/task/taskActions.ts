@@ -7,7 +7,7 @@ import taskRepository from "./taskRepository";
 // The B of BREAD - Browse (Read All) operation
 const browse: RequestHandler = async (req, res, next) => {
   try {
-    // Fetch all items
+    // Fetch all tasks
     const tasks = await taskRepository.readAll();
 
     // Respond with the items in JSON format
@@ -74,21 +74,21 @@ const add: RequestHandler = async (req, res, next) => {
       ? `/uploads/${multerReq.file.filename}`
       : null;
 
-    // Extract the item data from the request body
+    // Extract the task data from the request body
     const newTask = {
       title: req.body.title,
       description: req.body.description,
       location: req.body.location,
       image: imagePath,
       status: "open" as const,
-      customer_id: 1, // Temporary
+      customer_id: 1, // Temporaire : sera remplacé par req.user.id après mise en place de l'authentification
       category_id: req.body.category_id,
     };
 
-    // Create the item
+    // Create the task
     const insertId = await taskRepository.create(newTask);
 
-    // Respond with HTTP 201 (Created) and the ID of the newly inserted item
+    // Respond with HTTP 201 (Created) and the ID of the newly inserted task
     res.status(201).json({ insertId, imagePath });
   } catch (err) {
     // Pass any errors to the error-handling middleware
