@@ -72,6 +72,13 @@ CREATE TABLE review (
 
 -- Insertions des données de test
 
+INSERT INTO category (name) VALUES
+('DIY'),
+('Gardening'),
+('Moving'),
+('Cleaning'),
+('Other');
+
 INSERT INTO user (firstname, lastname, email, role, password, average_rating, total_reviews) VALUES
 ('John', 'Doe', 'john.doe@example.com', 'customer', '$2b$10$fakeHashedPassword1', 4.5, 3),
 ('Jane', 'Smith', 'jane.smith@example.com', 'tasker', '$2b$10$fakeHashedPassword2', 4.8, 5),
@@ -86,13 +93,6 @@ INSERT INTO customer (user_id, total_requests) VALUES
 INSERT INTO tasker (user_id, total_tasks) VALUES
 ((SELECT id FROM user WHERE email = 'jane.smith@example.com'), 5),
 ((SELECT id FROM user WHERE email = 'david.brown@example.com'), 2);
-
-INSERT INTO category (name) VALUES
-('DIY'),
-('Gardening'),
-('Moving'),
-('Cleaning'),
-('Other');
 
 INSERT INTO task (title, description, location, image, status, customer_id, category_id) VALUES
 ('Kitchen furniture installation', 'Need help installing a complete IKEA kitchen in a 70m² apartment. The kitchen includes wall and base units, a worktop, a sink and built-in appliances. Furniture is already on site. Please bring necessary tools. Estimated work time: full day.', 'Villeurbanne - 69100', "/uploads/kitchen.png", 'open', 
