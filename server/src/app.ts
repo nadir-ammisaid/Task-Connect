@@ -28,7 +28,7 @@ import cors from "cors";
 
 const allowedOrigins = [
   process.env.CLIENT_URL, // for local dev
-  "https://tasksconnect.netlify.app", // for production in Netlify
+  "https://www.taskconnect.fr", // for production in Netlify
 ].filter(Boolean) as string[];
 
 app.use(
