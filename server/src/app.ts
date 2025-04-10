@@ -34,7 +34,7 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: allowedOrigins,
-    credentials: true, // utile si tu veux envoyer des cookies / headers auth
+    credentials: true, // utile pour envoyer des cookies / headers auth
   }),
 );
 
