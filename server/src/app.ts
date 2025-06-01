@@ -20,10 +20,25 @@ const app = express();
 
 import cors from "cors";
 
-if (process.env.CLIENT_URL != null) {
-  app.use(cors({ origin: [process.env.CLIENT_URL] }));
-}
+// ***********
+// This part below when working in local, now I comment it :
+// if (process.env.CLIENT_URL != null) {
+//   app.use(cors({ origin: [process.env.CLIENT_URL] }));
+// }
 
+const allowedOrigins = [
+  process.env.CLIENT_URL, // for local dev
+  "https://www.taskconnect.fr", // for production in Netlify
+].filter(Boolean) as string[];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true, // utile pour envoyer des cookies / headers auth
+  }),
+);
+
+// ***********
 // If you need to allow extra origins, you can add something like this:
 
 /*
