@@ -1,5 +1,6 @@
 import { type ChangeEvent, type ReactNode, useEffect, useState } from "react";
 import "./TaskForm.css";
+import uploadIcon from "../../src/assets/images/upload-3-128.png";
 
 type TaskData = {
   // firstname: string;
@@ -135,11 +136,7 @@ function TaskForm({ children, defaultValue, onSubmit }: TaskFormProps) {
 
         <p>Upload an image:</p>
         <label htmlFor="image-upload" className="upload-label">
-          <img
-            src="../../src/assets/images/upload-3-128-Copie.png"
-            alt="upload"
-            id="upload-icon"
-          />
+          <img src={uploadIcon} alt="upload" id="upload-icon" />
         </label>
         <input
           type="file"
