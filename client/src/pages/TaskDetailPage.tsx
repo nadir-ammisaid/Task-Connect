@@ -144,7 +144,7 @@ function TaskDetailPage() {
                         alt="user"
                         className="avatar-icon-detail-tasker"
                       />
-                      <span>Jessica.J ⭐4,8(24)</span>
+                      <span>Aboubaker.A ⭐4,8(24)</span>
                     </div>
                     <span className="offer-price">160,00 €</span>
                   </div>
