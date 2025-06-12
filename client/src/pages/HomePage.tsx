@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import mainImageHome from "../../public/mainImageHome.jpg";
+import mainImageHome from "../../public/mainImageHome-resized.jpg";
 import plusButton from "../../src/assets/images/Plus_square_button.png";
 import "./HomePage.css";
 
