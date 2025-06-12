@@ -80,85 +80,93 @@ INSERT INTO category (name) VALUES
 ('Other');
 
 INSERT INTO user (firstname, lastname, email, role, password, average_rating, total_reviews) VALUES
-('John', 'Doe', 'john.doe@example.com', 'customer', '$2b$10$fakeHashedPassword1', 4.5, 3),
-('Jane', 'Smith', 'jane.smith@example.com', 'tasker', '$2b$10$fakeHashedPassword2', 4.8, 5),
-('Mike', 'Johnson', 'mike.johnson@example.com', 'both', '$2b$10$fakeHashedPassword3', 4.2, 4),
-('Sarah', 'Williams', 'sarah.williams@example.com', 'customer', '$2b$10$fakeHashedPassword4', 4.7, 2),
-('David', 'Brown', 'david.brown@example.com', 'tasker', '$2b$10$fakeHashedPassword5', 4.9, 6);
+('Nadir', 'AMMI SAID', 'nadir.ammisaid@gmail.com', 'customer', '$2b$10$fakeHashedPassword0', 4.9, 8),
+('Lucas', 'Moreau', 'lucas.moreau@gmail.com', 'customer', '$2b$10$fakeHashedPassword1', 4.5, 3),
+('Camille', 'Dubois', 'camille.dubois@gmail.com', 'tasker', '$2b$10$fakeHashedPassword2', 4.8, 5),
+('Antoine', 'Lemoine', 'antoine.lemoine@gmail.com', 'both', '$2b$10$fakeHashedPassword3', 4.2, 4),
+('Émilie', 'Renard', 'emilie.renard@gmail.com', 'customer', '$2b$10$fakeHashedPassword4', 4.7, 2),
+('Julien', 'Bernard', 'julien.bernard@gmail.com', 'tasker', '$2b$10$fakeHashedPassword5', 4.9, 6);
 
 INSERT INTO customer (user_id, total_requests) VALUES
-((SELECT id FROM user WHERE email = 'john.doe@example.com'), 3),
-((SELECT id FROM user WHERE email = 'sarah.williams@example.com'), 2);
+((SELECT id FROM user WHERE email = 'nadir.ammisaid@gmail.com'), 1),
+((SELECT id FROM user WHERE email = 'lucas.moreau@gmail.com'), 3),
+((SELECT id FROM user WHERE email = 'antoine.lemoine@gmail.com'), 5),
+((SELECT id FROM user WHERE email = 'camille.dubois@gmail.com'), 4),
+((SELECT id FROM user WHERE email = 'emilie.renard@gmail.com'), 2);
 
 INSERT INTO tasker (user_id, total_tasks) VALUES
-((SELECT id FROM user WHERE email = 'jane.smith@example.com'), 5),
-((SELECT id FROM user WHERE email = 'david.brown@example.com'), 2);
+((SELECT id FROM user WHERE email = 'julien.bernard@gmail.com'), 2);
 
 INSERT INTO task (title, description, location, image, status, customer_id, category_id) VALUES
 ('Kitchen furniture installation', 'Need help installing a complete IKEA kitchen in a 70m² apartment. The kitchen includes wall and base units, a worktop, a sink and built-in appliances. Furniture is already on site. Please bring necessary tools. Estimated work time: full day.', 'Villeurbanne - 69100', "/uploads/kitchen.png", 'open', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'antoine.lemoine@gmail.com')), 
     (SELECT id FROM category WHERE name = 'DIY')),
 
-('Deep house cleaning', 'Deep cleaning of an 85m² apartment before moving out. 4 rooms + kitchen and bathroom. Includes window cleaning, floor cleaning, bathroom sanitizing and descaling. Products and equipment must be provided by the service provider.', 'Vénissieux - 69200', "/uploads/house-cleaning-service-florida.jpg", 'open', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
+('Deep house cleaning', 'Deep cleaning of an 85m² apartment before moving out. 4 rooms + kitchen and bathroom. Includes window cleaning, floor cleaning, bathroom sanitizing and descaling. Products and equipment must be provided by the service provider.', 'Vénissieux - 69200', "/uploads/house-cleaning-service-florida.jpg", 'assigned', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'lucas.moreau@gmail.com')), 
     (SELECT id FROM category WHERE name = 'Cleaning')),
 
 ('Garden maintenance and hedge trimming', 'Large garden requiring 25-meter hedge trimming, 200m² lawn mowing, and flower bed weeding. Equipment can be provided on site. Estimated work: full day job. Garden is well maintained, just needs regular upkeep.', 'Caluire-et-Cuire - 69300', "/uploads/garden.jpg", 'open', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'nadir.ammisaid@gmail.com')), 
     (SELECT id FROM category WHERE name = 'Gardening')),
 
 ('House moving 120m²', 'Moving a family house to another location 15km away. Furniture to be dismantled and reassembled, about 50 boxes to transport. 20m3 truck needed. Easy access on both sides, no stairs. Need help with packing and unpacking.', 'Bron - 69500', "/uploads/moving-boxes.jpg", 'assigned', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'emilie.renard@gmail.com')), 
     (SELECT id FROM category WHERE name = 'Moving')),
 
 ('Bathroom leak repair', 'Leak in shower joint causing infiltration. Requires replacement of silicone joint and potentially part of the wall tiling (2-3 tiles). Urgent intervention needed. Bathroom is on first floor, easy access.', 'Vaulx-en-Velin - 69120', "/uploads/bathroom.png", 'open', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'camille.dubois@gmail.com')), 
     (SELECT id FROM category WHERE name = 'DIY')),
 
-('Electric awning installation', 'Installation of two electric awnings on a terrace. Awnings already purchased (Somfy), surface 4m x 3m each. Requires drilling in facade and electrical connection. Height: 2.5m. Professional experience required.', 'Écully - 69130', "/uploads/electrical-awning.jpg", 'open', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
+('Electric awning installation', 'Installation of two electric awnings on a terrace. Awnings already purchased (Somfy), surface 4m x 3m each. Requires drilling in facade and electrical connection. Height: 2.5m. Professional experience required.', 'Écully - 69130', "/uploads/electrical-awning.jpg", 'assigned', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'lucas.moreau@gmail.com')), 
     (SELECT id FROM category WHERE name = 'DIY')),
 
 ('Student studio renovation', 'Complete cleaning of a 25m² student studio after 2 years of rental. Includes wall washing, window cleaning, bathroom descaling, kitchen degreasing. Minor repairs expected. All cleaning supplies must be provided.', 'Oullins - 69600', "/uploads/studio.jpg", 'open', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'antoine.lemoine@gmail.com')), 
     (SELECT id FROM category WHERE name = 'Cleaning')),
 
 ('Flower bed creation', 'Creation of a 15m² flower bed: soil preparation, planting perennials and shrubs, installation of automatic watering system. Plants will be provided. Ground already cleared. Looking for someone with gardening experience.', 'Saint-Priest - 69800', "/uploads/flower.png", 'assigned', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'camille.dubois@gmail.com')), 
     (SELECT id FROM category WHERE name = 'Gardening')),
 
 ('Wardrobe furniture assembly', 'Assembly of several IKEA PAX wardrobe units: 3 wardrobes with sliding doors, interior shelves and drawers. Total dimensions: 3.5m wide x 2.4m high. Furniture already on site. Experience with IKEA furniture required.', 'Tassin-la-Demi-Lune - 69160', "/uploads/furniture-assembler.png", 'open', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'john.doe@example.com')), 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'lucas.moreau@gmail.com')), 
     (SELECT id FROM category WHERE name = 'DIY')),
 
-('Urgent moving help needed', 'Urgent move from a 2-bedroom apartment on 4th floor without elevator to a 1-bedroom on 2nd floor with elevator. About 30 boxes and some furniture to dismantle/reassemble. 5km distance. Minimum 2 people needed.', 'Décines-Charpieu - 69150', "/uploads/local-moving-help.jpg", 'open', 
-    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'sarah.williams@example.com')), 
-    (SELECT id FROM category WHERE name = 'Moving'));
+('Urgent moving help needed', 'Urgent move from a 2-bedroom apartment on 4th floor without elevator to a 1-bedroom on 2nd floor with elevator. About 30 boxes and some furniture to dismantle/reassemble. 5km distance. Minimum 2 people needed.', 'Décines-Charpieu - 69150', "/uploads/local-moving-help.jpg", 'assigned', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'emilie.renard@gmail.com')), 
+    (SELECT id FROM category WHERE name = 'Moving')),
 
-INSERT INTO offer (price, currency, comment, tasker_id, task_id, status) VALUES
-(150.00, 'EUR', 'I can do this quickly, I have experience with IKEA kitchens', 
-    (SELECT id FROM tasker WHERE user_id = (SELECT id FROM user WHERE email = 'jane.smith@example.com')), 
-    1,
-    'pending'),
-(180.00, 'EUR', 'Professional experience, all tools provided', 
-    (SELECT id FROM tasker WHERE user_id = (SELECT id FROM user WHERE email = 'david.brown@example.com')), 
-    1,
-    'pending'),
-(120.00, 'EUR', 'Available immediately, 5 years of experience', 
-    (SELECT id FROM tasker WHERE user_id = (SELECT id FROM user WHERE email = 'jane.smith@example.com')), 
-    2,
-    'pending');
+('Montage étagères et fixation au mur', 'Besoin d''aide pour monter et fixer 3 étagères IKEA au mur dans un salon. Hauteur 2m, mur en béton, chevilles et vis fournies. Outils de base disponibles. Travail estimé à 2-3 heures. Personne soigneuse et expérimentée en bricolage recherchée.', 'Villeurbanne - 69100', "/uploads/shelves.jpg", 'open', 
+    (SELECT id FROM customer WHERE user_id = (SELECT id FROM user WHERE email = 'nadir.ammisaid@gmail.com')), 
+    (SELECT id FROM category WHERE name = 'DIY'));
 
-INSERT INTO review (rating, comment, reviewer_id, reviewee_id) VALUES
-(4, 'Très bon travail', 
-    (SELECT id FROM user WHERE email = 'john.doe@example.com'), 
-    (SELECT id FROM user WHERE email = 'jane.smith@example.com')),
-(5, 'Parfait, rapide et efficace', 
-    (SELECT id FROM user WHERE email = 'sarah.williams@example.com'), 
-    (SELECT id FROM user WHERE email = 'jane.smith@example.com')),
-(5, 'Service impeccable', 
-    (SELECT id FROM user WHERE email = 'mike.johnson@example.com'), 
-    (SELECT id FROM user WHERE email = 'david.brown@example.com')),
-(4, 'Très professionnel', 
-    (SELECT id FROM user WHERE email = 'john.doe@example.com'), 
-    (SELECT id FROM user WHERE email = 'david.brown@example.com'));
+
+-- INSERT INTO offer (price, currency, comment, tasker_id, task_id, status) VALUES
+-- (150.00, 'EUR', 'I can do this quickly, I have experience with IKEA kitchens', 
+--     (SELECT id FROM tasker WHERE user_id = (SELECT id FROM user WHERE email = 'camille.dubois@gmail.com')), 
+--     2,
+--     'pending'),
+-- (180.00, 'EUR', 'Professional experience, all tools provided', 
+--     (SELECT id FROM tasker WHERE user_id = (SELECT id FROM user WHERE email = 'julien.bernard@gmail.com')), 
+--     2,
+--     'pending'),
+-- (120.00, 'EUR', 'Available immediately, 5 years of experience', 
+--     (SELECT id FROM tasker WHERE user_id = (SELECT id FROM user WHERE email = 'camille.dubois@gmail.com')), 
+--     3,
+--     'pending');
+
+-- INSERT INTO review (rating, comment, reviewer_id, reviewee_id) VALUES
+-- (4, 'Très bon travail', 
+--     (SELECT id FROM user WHERE email = 'lucas.moreau@gmail.com'), 
+--     (SELECT id FROM user WHERE email = 'camille.dubois@gmail.com')),
+-- (5, 'Parfait, rapide et efficace', 
+--     (SELECT id FROM user WHERE email = 'emilie.renard@gmail.com'), 
+--     (SELECT id FROM user WHERE email = 'camille.dubois@gmail.com')),
+-- (5, 'Service impeccable', 
+--     (SELECT id FROM user WHERE email = 'antoine.lemoine@gmail.com'), 
+--     (SELECT id FROM user WHERE email = 'julien.bernard@gmail.com')),
+-- (4, 'Très professionnel', 
+--     (SELECT id FROM user WHERE email = 'lucas.moreau@gmail.com'), 
+--     (SELECT id FROM user WHERE email = 'julien.bernard@gmail.com'));
