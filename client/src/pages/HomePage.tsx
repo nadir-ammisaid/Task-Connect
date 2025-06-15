@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import mainImageHome from "../../src/assets/images/mainImageHome.avif";
 import plusButton from "../../src/assets/images/Plus_square_button.svg";
+import mainImageHome from "../../src/assets/images/mainImageHome.avif";
 import "./HomePage.css";
 
 function HomePage() {
@@ -50,6 +50,9 @@ function HomePage() {
           </div>
           <Link to="/post-a-new-task">
             <img src={plusButton} alt="plusButton" id="plusButton" />
+          </Link>
+          <Link to="/post-a-new-task" className="CTA">
+            Click here 👆 and get it done !
           </Link>
 
           <div className="features-section">
