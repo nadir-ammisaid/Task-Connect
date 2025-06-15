@@ -1,10 +1,10 @@
 import "./Header.css";
 import { NavLink } from "react-router-dom";
-import logoDesktop from "../../src/assets/images/logoDesktop.avif";
-import logoMobile from "../../src/assets/images/logoMobile.avif";
 import bell_icon from "../../src/assets/images/bell_icon.png";
 import homeIcon from "../../src/assets/images/home-7-128.png";
 import myTasksIcon from "../../src/assets/images/list-2-128.png";
+import logoDesktop from "../../src/assets/images/logoDesktop.avif";
+import logoMobile from "../../src/assets/images/logoMobile.avif";
 import postATaskIcon from "../../src/assets/images/plus-5-128.png";
 import browseIcon from "../../src/assets/images/search-9-128.png";
 import accountIcon from "../../src/assets/images/user-128.png";
