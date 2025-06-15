@@ -1,5 +1,5 @@
 import "./MyTasksPage.css";
-import constructionIcon from "../../src/assets/images/construction-5.svg";
+import constructionIcon from "../../src/assets/images/construction.svg";
 
 function MyTasksPage() {
   return (
