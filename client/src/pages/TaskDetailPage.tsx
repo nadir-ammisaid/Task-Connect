@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom"; // Added useNavigate
-import defaultTaskImage from "../../src/assets/images/default-task.png";
+import defaultTaskImage from "../../src/assets/images/default-task.avif";
 import locationIcon from "../../src/assets/images/location-80-128.png";
 import timeIcon from "../../src/assets/images/tear-of-calendar-128.png";
 import userAvatar from "../../src/assets/images/user-128-2.png";

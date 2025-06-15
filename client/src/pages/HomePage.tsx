@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import mainImageHome from "../../public/mainImageHome-resized.avif";
-import plusButton from "../../src/assets/images/Plus_square_button.png";
+import mainImageHome from "../../src/assets/images/mainImageHome.avif";
+import plusButton from "../../src/assets/images/Plus_square_button.svg";
 import "./HomePage.css";
 
 function HomePage() {
