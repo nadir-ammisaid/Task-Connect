@@ -9,7 +9,7 @@
 
 #carousel-heading-text {
   text-align: center;
-  font-size: 4vw;
+  font-size: 6vw;
   margin: 2vh 23vw 5vh 23vw;
 }
 
@@ -43,7 +43,6 @@
   filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.2));
 }
 
-/* Nouvelles sections ajoutées */
 .subtitle {
   text-align: center;
   color: #207868;
@@ -52,6 +51,17 @@
   text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px
     1px 0 #ffffff;
   margin-bottom: 2rem;
+}
+
+.CTA {
+  text-align: center;
+  color: #207868;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px
+    1px 0 #ffffff;
+  margin-bottom: 2rem;
+  text-decoration: none;
 }
 
 .features-section {
@@ -141,6 +151,9 @@
     display: none;
   }
 
+  #carousel-heading-text {
+    font-size: 3vw;
+  }
   #carousel {
     margin: 1rem 0 1rem 0;
   }
@@ -168,6 +181,10 @@
 
   .subtitle {
     font-size: 1.2rem;
+  }
+
+  .CTA {
+    font-size: 2rem;
   }
 
   .feature-card {

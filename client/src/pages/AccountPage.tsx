@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import userAvatar from "../../src/assets/images/user-128-2.png";
+// import userAvatar from "../../src/assets/images/user-128-2.png";
+import userAvatarNadir from "../../src/assets/images/nadirProfilePicture.jpeg";
 import "./AccountPage.css";
 import { Link } from "react-router-dom";
 
@@ -41,7 +42,12 @@ function AccountPage() {
                 ⭐ {user?.average_rating} ({user?.total_reviews})
               </div>
             </div>
-            <img src={userAvatar} alt="Profile" className="profile-avatar" />
+            {/* <img src={userAvatar} alt="Profile" className="profile-avatar" /> */}
+            <img
+              src={userAvatarNadir}
+              alt="Profile"
+              className="profile-avatar"
+            />
           </div>
         </section>
         <Link to="/edit-account">
