@@ -64,7 +64,7 @@ sequenceDiagram
 <div align="center">
   <img src="client/src/assets/images/Arborescnece projet.png" alt="Flux de navigation de l'application" width="800">
 </div>
-Grâce à cette architecture modulaire et sécurisée, Smart Choice Hub assure une gestion efficace des données, une communication fluide entre le front-end et le back-end, et une évolutivité facilitée pour de futures améliorations.
+Grâce à cette architecture modulaire et sécurisée, Smart Choice Hub assure une gestion efficace des données, une communication fluide entre le front-end et le back-end, et une évolutivité facilitée pour de futures améliorations. 
 -->
 
 ## Stack
