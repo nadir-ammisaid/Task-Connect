@@ -43,9 +43,16 @@ function NotificationPage() {
     };
 
     // Smooth scrolling for anchor links
-    const handleAnchorClick = (e) => {
+    const handleAnchorClick = (e: Event) => {
       e.preventDefault();
-      const target = document.querySelector(e.target.getAttribute("href"));
+
+      // Vérifier si target est bien un HTMLAnchorElement
+      if (!(e.target instanceof HTMLAnchorElement)) return;
+
+      const href = e.target.getAttribute("href");
+      if (!href) return;
+
+      const target = document.querySelector(href);
       if (target) {
         target.scrollIntoView({
           behavior: "smooth",
@@ -53,7 +60,6 @@ function NotificationPage() {
         });
       }
     };
-
     // Add event listeners
     burger?.addEventListener("click", handleBurgerClick);
     document.addEventListener("click", handleDocumentClick);
