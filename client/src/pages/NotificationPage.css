@@ -263,7 +263,7 @@ header {
   position: relative;
   color: white;
   text-align: center;
-  padding: 5rem 0;
+  padding: 1rem 0;
   overflow: hidden;
 }
 
@@ -307,7 +307,7 @@ header {
 
 /* Services Section */
 .services {
-  padding: 5rem 0;
+  padding: 1rem 0;
   background: white;
 }
 
@@ -422,7 +422,7 @@ header {
 .app-download {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 5rem 0;
+  padding: 1rem 0;
   text-align: center;
   position: relative;
 }
@@ -447,12 +447,12 @@ header {
 .app-download h2 {
   color: white;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
 }
 
 .app-download p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   opacity: 0.9;
 }
 
@@ -462,7 +462,6 @@ header {
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
 }
 
 .play-store-badge {

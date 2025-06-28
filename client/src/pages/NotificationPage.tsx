@@ -201,7 +201,9 @@ function NotificationPage() {
 
       <section id="services" className="services">
         <div className="container">
-          <h2>Nos Services dans toute l'Algérie</h2>
+          {/* <h2>Nos Services dans toute l'Algérie</h2> */}
+          <h2>Des services fiables, partout en Algérie</h2>
+
           <p
             style={{
               textAlign: "center",
@@ -384,7 +386,7 @@ function NotificationPage() {
                   alt="Web Browser"
                   className="play-store-badge"
                 />
-                Continuer sans télécharger
+                Continuer sur le site
               </a>
             </div>
 
