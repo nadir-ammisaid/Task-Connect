@@ -72,7 +72,7 @@ sequenceDiagram
 
 <!--
 ## Flux de navigation de l'application
-
+ 
 <div align="center">
   <img src="client/src/assets/images/Arborescnece projet.png" alt="Flux de navigation de l'application" width="800">
 </div>
