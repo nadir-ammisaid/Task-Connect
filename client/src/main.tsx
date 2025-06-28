@@ -53,10 +53,6 @@ const router = createBrowserRouter([
         element: <TaskNew />,
       },
       {
-        path: "notifications",
-        element: <NotificationPage />,
-      },
-      {
         path: "my-tasks",
         element: <MyTasksPage />,
       },
@@ -69,6 +65,10 @@ const router = createBrowserRouter([
         element: <EditAccountPage />,
       },
     ],
+  },
+  {
+    path: "notifications",
+    element: <NotificationPage />,
   },
   // Try adding a new route! For example, "/about" with an About component
 ]);
