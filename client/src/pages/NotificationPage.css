@@ -311,6 +311,11 @@ header {
   background: white;
 }
 
+/* Carrousel caché par défaut sur desktop */
+.services-carousel {
+  display: none;
+}
+
 .services-grid {
   display: flex;
   flex-wrap: wrap;
@@ -509,6 +514,12 @@ header {
   color: #000000;
 }
 
+.download-separator {
+  color: white;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+}
+
 /* Testimonials */
 .testimonials {
   background: white;
@@ -615,6 +626,65 @@ footer {
     max-width: 18.75rem;
     justify-content: center;
   }
+
+  /* Services Mobile - Cache la grid sur mobile */
+  .services-grid {
+    display: none;
+  }
+
+  /* Affiche le carrousel sur mobile */
+  .services-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    /* Masquer la scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE et Edge */
+  }
+
+  .services-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari et Opera */
+  }
+
+  .services-carousel .service-card {
+    flex: 0 0 75vw; /* Largeur de 75% de la viewport */
+    scroll-snap-align: start;
+    min-width: 75vw;
+    max-width: 75vw;
+    margin: 0; /* Supprime les marges par défaut */
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .carousel-dots::after {
+    content: "← Glissez pour voir plus →";
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 34.375rem) {
+  /* 550px */
+  /* Services pour écrans en dessous de 550px */
+  .services-carousel {
+    gap: 1.5rem; /* Augmente l'espace entre les cartes */
+  }
+
+  .services-carousel .service-card {
+    flex: 0 0 70vw; /* 70% de la largeur pour laisser voir 30% */
+    min-width: 70vw;
+    max-width: 70vw;
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 30rem) {
@@ -630,5 +700,21 @@ footer {
   .mobile-menu {
     width: 17.5rem;
     right: -17.5rem;
+  }
+
+  /* Services pour très petits écrans */
+  .services-carousel .service-card {
+    flex: 0 0 75vw;
+    min-width: 75vw;
+    max-width: 75vw;
+    padding: 1.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
   }
 }
