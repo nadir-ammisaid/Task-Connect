@@ -395,9 +395,9 @@ header {
 }
 
 /* Carrousel caché par défaut sur desktop pour les étapes */
-.steps-carousel {
+/* .steps-carousel {
   display: none;
-}
+} */
 
 .steps-grid {
   display: grid;
@@ -690,34 +690,34 @@ header {
   }
 
   /* How It Works Mobile - Cache la grid sur mobile */
-  .steps-grid {
+  /* .steps-grid {
     display: none;
-  }
+  } */
 
   /* Affiche le carrousel sur mobile pour les étapes */
-  .steps-carousel {
+  /* .steps-carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 1rem;
     padding: 2rem 1rem;
-    /* Masquer la scrollbar */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE et Edge */
-  }
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  } */
 
-  .steps-carousel::-webkit-scrollbar {
-    display: none; /* Chrome, Safari et Opera */
-  }
+  /* Chrome, Safari et Opera */
+  /* .steps-carousel::-webkit-scrollbar {
+    display: none;
+  } */
 
-  .steps-carousel .step {
-    flex: 0 0 75vw; /* Largeur de 75% de la viewport */
+  /* .steps-carousel .step {
+    flex: 0 0 75vw;
     scroll-snap-align: start;
     min-width: 75vw;
     max-width: 75vw;
-    margin: 0; /* Supprime les marges par défaut */
-  }
+    margin: 0;
+  } */
 
   /* Testimonials Mobile - Cache la grid sur mobile */
   .testimonials-grid {
@@ -762,6 +762,20 @@ header {
     color: #6b7280;
     font-style: italic;
   }
+
+  .steps-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .step {
+    flex: 0 1 calc(50% - 0.5rem);
+    min-width: calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 34.375rem) {
@@ -779,9 +793,9 @@ header {
   }
 
   /* Steps pour écrans en dessous de 550px */
-  .steps-carousel {
+  /* .steps-carousel {
     gap: 1.5rem;
-  }
+  } */
 
   .steps-carousel .step {
     flex: 0 0 70vw;
@@ -835,18 +849,18 @@ header {
   }
 
   /* Steps pour très petits écrans */
-  .steps-carousel .step {
+  /* .steps-carousel .step {
     flex: 0 0 75vw;
     min-width: 75vw;
     max-width: 75vw;
     padding: 1.5rem;
-  }
+  } */
 
   /* Testimonials pour très petits écrans */
-  .testimonials-carousel .testimonial-card {
+  /* .testimonials-carousel .testimonial-card {
     flex: 0 0 75vw;
     min-width: 75vw;
     max-width: 75vw;
     padding: 1.5rem;
-  }
+  } */
 }
