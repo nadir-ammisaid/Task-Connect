@@ -404,6 +404,42 @@ function NotificationPage() {
               </p>
             </div>
           </div>
+          {/* Carrousel pour mobile */}
+          <div className="steps-carousel">
+            <div className="step">
+              <div className="step-number">1</div>
+              <h3>Décrivez votre besoin</h3>
+              <p>
+                Ajoutez des détails pour que les jobbers comprennent clairement
+                votre demande (type de service, délais, contexte, etc.)
+              </p>
+            </div>
+            <div className="step">
+              <div className="step-number">2</div>
+              <h3>Recevez des offres</h3>
+              <p>
+                Comparez les propositions d'artisans près de chez vous et
+                choisissez celui qui vous convient
+              </p>
+            </div>
+            <div className="step">
+              <div className="step-number">3</div>
+              <h3>Service réalisé</h3>
+              <p>
+                L'artisan effectue la prestation, le paiement se fait
+                directement entre vous
+              </p>
+            </div>
+            <div className="step">
+              <div className="step-number">4</div>
+              <h3>Laissez un avis</h3>
+              <p>
+                Évaluez la prestation de l'artisan pour aider la communauté à
+                faire le bon choix
+              </p>
+            </div>
+          </div>
+          <div className="carousel-dots" />
         </div>
       </section>
       <section id="download" className="app-download">
@@ -491,6 +527,43 @@ function NotificationPage() {
               </div>
             </div>
           </div>
+          {/* Carrousel pour mobile */}
+          <div className="testimonials-carousel">
+            <div className="testimonial-card">
+              <p>
+                "J'avais une panne d'électricité un vendredi soir. Grâce à Jeel
+                Work, j'ai pu contacter un artisan dispo rapidement. Travail
+                propre, prix raisonnable."
+              </p>
+              <div className="testimonial-author">Yahia BOUKERMOUCHE</div>
+              <div className="testimonial-role">
+                Particulier - Ghardaïa, Ghardaïa
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <p>
+                "Je devais réparer une fuite d'eau dans ma cuisine. J'ai trouvé
+                un plombier sérieux via Jeel Work. Il est venu le jour même, ça
+                m'a bien arrangé."
+              </p>
+              <div className="testimonial-author">Aissa KERROUCHI</div>
+              <div className="testimonial-role">
+                Propriétaire - Berriane, Ghardaïa
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <p>
+                "J'avais besoin de quelqu'un pour tailler des palmiers et des
+                arbres autour de ma maison. En quelques clics sur Jeel Work,
+                j'ai trouvé un artisan équipé et sérieux. Très bon service."
+              </p>
+              <div className="testimonial-author">Belhadj BEN CHIKH</div>
+              <div className="testimonial-role">
+                Entrepreneur - Guerrara, Ghardaïa
+              </div>
+            </div>
+          </div>
+          <div className="carousel-dots" />
         </div>
       </section>
 
