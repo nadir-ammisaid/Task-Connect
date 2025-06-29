@@ -93,12 +93,12 @@ function NotificationPage() {
         <div className="container">
           <nav className="navbar">
             <div className="logo">
-              Jeel Work
               <img
                 src={jeelWorkIcon}
                 alt="logo Jeel Work"
                 className="logo-img"
               />
+              Jeel Work
             </div>
             <ul className="nav-links">
               <li>
@@ -405,7 +405,8 @@ function NotificationPage() {
             </div>
           </div>
           {/* Carrousel pour mobile */}
-          <div className="steps-carousel">
+
+          {/* <div className="steps-carousel">
             <div className="step">
               <div className="step-number">1</div>
               <h3>Décrivez votre besoin</h3>
@@ -439,7 +440,7 @@ function NotificationPage() {
               </p>
             </div>
           </div>
-          <div className="carousel-dots" />
+          <div className="carousel-dots" /> */}
         </div>
       </section>
       <section id="download" className="app-download">
