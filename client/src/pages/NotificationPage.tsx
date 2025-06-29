@@ -11,6 +11,7 @@ declare global {
 import googlePlayIcon from "../assets/images/google-play-playstore-logo.png";
 import internetWebIcon from "../assets/images/internet-web-browser-icon.svg";
 import jeelWorkIcon from "../assets/images/jeelWorkLogo.webp";
+import palestineIcon from "../assets/images/palestine-flag-circular-17840.svg";
 
 function NotificationPage() {
   useEffect(() => {
@@ -92,38 +93,6 @@ function NotificationPage() {
         <div className="container">
           <nav className="navbar">
             <div className="logo">
-              <span>🍉</span>
-              {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                shapeRendering="geometricPrecision"
-                textRendering="geometricPrecision"
-                imageRendering="optimizeQuality"
-                fillRule="evenodd"
-                clipRule="evenodd"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="#4D4D4D"
-                  fillRule="nonzero"
-                  d="M256-.001c70.684 0 134.69 28.664 181.013 74.988C483.337 121.31 512.001 185.316 512.001 256c0 70.684-28.664 134.69-74.988 181.013C390.69 483.337 326.684 512.001 256 512.001c-70.677 0-134.69-28.664-181.013-74.988C28.663 390.69-.001 326.676-.001 256c0-70.684 28.664-134.69 74.988-181.013C121.31 28.663 185.316-.001 256-.001z"
-                />
-                <path
-                  fill="#fff"
-                  fillRule="nonzero"
-                  d="M256.001 19.596c65.278 0 124.383 26.466 167.163 69.243 42.776 42.779 69.243 101.884 69.243 167.162s-26.467 124.383-69.246 167.16c-42.777 42.779-101.882 69.246-167.16 69.246-65.278 0-124.383-26.467-167.162-69.243-42.777-42.78-69.243-101.885-69.243-167.163S46.062 131.618 88.839 88.839c42.779-42.777 101.884-69.243 167.162-69.243z"
-                />
-                <path
-                  fill="#063"
-                  fillRule="nonzero"
-                  d="M255.939 39.594v432.815c-119.491-.033-216.345-96.911-216.345-216.408 0-119.5 96.854-216.375 216.345-216.407z"
-                />
-                <path
-                  fill="#D21034"
-                  fillRule="nonzero"
-                  d="M351.787 196.335c-19.747-34.233-56.313-55.338-95.848-55.338-61.115 0-110.676 49.561-110.676 110.676 0 61.113 49.561 110.677 110.676 110.677 39.535 0 76.086-21.094 95.854-55.333a88.607 88.607 0 01-69.122 33.197c-48.893 0-88.541-39.65-88.541-88.541 0-48.893 39.648-88.541 88.541-88.541a88.558 88.558 0 0169.116 33.206v-.003zm4.259 55.338l-100.107-32.526 61.871 85.154V199.042L255.939 284.2l100.107-32.527z"
-                />
-              </svg>
               Jeel Work
               <img
                 src={jeelWorkIcon}
@@ -184,7 +153,6 @@ function NotificationPage() {
           </ul>
         </div>
       </header>
-
       <section className="hero">
         <div className="container">
           <div className="hero-content">
@@ -198,12 +166,10 @@ function NotificationPage() {
           </div>
         </div>
       </section>
-
       <section id="services" className="services">
         <div className="container">
           {/* <h2>Nos Services dans toute l'Algérie</h2> */}
           <h2>Des services fiables, partout en Algérie</h2>
-
           <p
             style={{
               textAlign: "center",
@@ -214,91 +180,183 @@ function NotificationPage() {
           >
             Des professionnels qualifiés dans les 48 wilayas
           </p>
-          <div className="services-grid">
-            <div className="service-card">
-              <span className="service-icon">🔌</span>
-              <h3>Électricité</h3>
-              <p>
-                Dépannage de pannes électriques, installation de prises,
-                interrupteurs et tableaux électriques, pose de compteurs
-              </p>
+          <div className="carousel-wrapper">
+            {/* Grid pour desktop */}
+            <div className="services-grid">
+              <div className="service-card">
+                <span className="service-icon">🔌</span>
+                <h3>Électricité</h3>
+                <p>
+                  Dépannage de pannes électriques, installation de prises,
+                  interrupteurs et tableaux électriques, pose de compteurs
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🚰</span>
+                <h3>Plomberie</h3>
+                <p>
+                  Réparation de fuites et chasses d'eau, installation de
+                  chauffe-eaux, robinets, éviers et débouchage de canalisations
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🎨</span>
+                <h3>Peinture</h3>
+                <p>
+                  Peinture intérieure/extérieure, application d'enduits et
+                  sous-couches, réparation de fissures et préparation de
+                  surfaces
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🧱</span>
+                <h3>Maçonnerie</h3>
+                <p>
+                  Construction de murs, réparation de fissures, pose de
+                  carreaux, faïence et dallage, réalisation de chapes et travaux
+                  en béton
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">💡</span>
+                <h3>Décoration & Placo</h3>
+                <p>
+                  Faux plafonds et éclairage LED intégré, moulures et corniches
+                  en plâtre, cloisons et habillages décoratifs
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🛠️</span>
+                <h3>Bricolage</h3>
+                <p>
+                  Montage de meubles et étagères, réparation de portes et
+                  poignées, installation de tringles et petits travaux
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🚚</span>
+                <h3>Déménagement & Transport</h3>
+                <p>
+                  Déménagements et transport de meubles, livraison d'objets
+                  volumineux, chargement/déchargement d'équipements lourds
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🌿</span>
+                <h3>Jardinage & Extérieur</h3>
+                <p>
+                  Taille de palmiers et entretien d'espaces extérieurs, arrosage
+                  d'arbres et aménagement de jardins traditionnels
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">❄️</span>
+                <h3>Climatisation</h3>
+                <p>
+                  Installation et maintenance de systèmes de climatisation,
+                  réparation et entretien d'unités split et centralisées
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🔧</span>
+                <h3>Autres</h3>
+                <p>
+                  Tous les autres services spécialisés non listés ci-dessus.
+                  Décrivez votre besoin et trouvez l'artisan qu'il vous faut
+                </p>
+              </div>
             </div>
-            <div className="service-card">
-              <span className="service-icon">🚰</span>
-              <h3>Plomberie</h3>
-              <p>
-                Réparation de fuites et chasses d'eau, installation de
-                chauffe-eaux, robinets, éviers et débouchage de canalisations
-              </p>
+
+            {/* Carrousel pour mobile */}
+            <div className="services-carousel">
+              <div className="service-card">
+                <span className="service-icon">🔌</span>
+                <h3>Électricité</h3>
+                <p>
+                  Dépannage de pannes électriques, installation de prises,
+                  interrupteurs et tableaux électriques, pose de compteurs
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🚰</span>
+                <h3>Plomberie</h3>
+                <p>
+                  Réparation de fuites et chasses d'eau, installation de
+                  chauffe-eaux, robinets, éviers et débouchage de canalisations
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🎨</span>
+                <h3>Peinture</h3>
+                <p>
+                  Peinture intérieure/extérieure, application d'enduits et
+                  sous-couches, réparation de fissures et préparation de
+                  surfaces
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🧱</span>
+                <h3>Maçonnerie</h3>
+                <p>
+                  Construction de murs, réparation de fissures, pose de
+                  carreaux, faïence et dallage, réalisation de chapes et travaux
+                  en béton
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">💡</span>
+                <h3>Décoration & Placo</h3>
+                <p>
+                  Faux plafonds et éclairage LED intégré, moulures et corniches
+                  en plâtre, cloisons et habillages décoratifs
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🛠️</span>
+                <h3>Bricolage</h3>
+                <p>
+                  Montage de meubles et étagères, réparation de portes et
+                  poignées, installation de tringles et petits travaux
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🚚</span>
+                <h3>Déménagement & Transport</h3>
+                <p>
+                  Déménagements et transport de meubles, livraison d'objets
+                  volumineux, chargement/déchargement d'équipements lourds
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🌿</span>
+                <h3>Jardinage & Extérieur</h3>
+                <p>
+                  Taille de palmiers et entretien d'espaces extérieurs, arrosage
+                  d'arbres et aménagement de jardins traditionnels
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">❄️</span>
+                <h3>Climatisation</h3>
+                <p>
+                  Installation et maintenance de systèmes de climatisation,
+                  réparation et entretien d'unités split et centralisées
+                </p>
+              </div>
+              <div className="service-card">
+                <span className="service-icon">🔧</span>
+                <h3>Autres</h3>
+                <p>
+                  Tous les autres services spécialisés non listés ci-dessus.
+                  Décrivez votre besoin et trouvez l'artisan qu'il vous faut
+                </p>
+              </div>
             </div>
-            <div className="service-card">
-              <span className="service-icon">🎨</span>
-              <h3>Peinture</h3>
-              <p>
-                Peinture intérieure/extérieure, application d'enduits et
-                sous-couches, réparation de fissures et préparation de surfaces
-              </p>
-            </div>
-            <div className="service-card">
-              <span className="service-icon">🧱</span>
-              <h3>Maçonnerie</h3>
-              <p>
-                Construction de murs, réparation de fissures, pose de carreaux,
-                faïence et dallage, réalisation de chapes et travaux en béton
-              </p>
-            </div>
-            <div className="service-card">
-              <span className="service-icon">💡</span>
-              <h3>Décoration & Placo</h3>
-              <p>
-                Faux plafonds et éclairage LED intégré, moulures et corniches en
-                plâtre, cloisons et habillages décoratifs
-              </p>
-            </div>
-            <div className="service-card">
-              <span className="service-icon">🛠️</span>
-              <h3>Bricolage</h3>
-              <p>
-                Montage de meubles et étagères, réparation de portes et
-                poignées, installation de tringles et petits travaux
-              </p>
-            </div>
-            <div className="service-card">
-              <span className="service-icon">🚚</span>
-              <h3>Déménagement & Transport</h3>
-              <p>
-                Déménagements et transport de meubles, livraison d'objets
-                volumineux, chargement/déchargement d'équipements lourds
-              </p>
-            </div>
-            <div className="service-card">
-              <span className="service-icon">🌿</span>
-              <h3>Jardinage & Extérieur</h3>
-              <p>
-                Taille de palmiers et entretien d'espaces extérieurs, arrosage
-                d'arbres et aménagement de jardins traditionnels
-              </p>
-            </div>
-            <div className="service-card">
-              <span className="service-icon">❄️</span>
-              <h3>Climatisation</h3>
-              <p>
-                Installation et maintenance de systèmes de climatisation,
-                réparation et entretien d'unités split et centralisées
-              </p>
-            </div>
-            <div className="service-card">
-              <span className="service-icon">🔧</span>
-              <h3>Autres</h3>
-              <p>
-                Tous les autres services spécialisés non listés ci-dessus.
-                Décrivez votre besoin et trouvez l'artisan qu'il vous faut
-              </p>
-            </div>
+
+            <div className="carousel-dots" />
           </div>
         </div>
       </section>
-
       <section id="fonctionnement" className="how-it-works">
         <div className="container">
           <h2>Comment ça marche</h2>
@@ -348,7 +406,6 @@ function NotificationPage() {
           </div>
         </div>
       </section>
-
       <section id="download" className="app-download">
         <div className="app-content">
           <div className="container">
@@ -396,7 +453,6 @@ function NotificationPage() {
           </div>
         </div>
       </section>
-
       <section id="temoignages" className="testimonials">
         <div className="container">
           <h2>Ils nous font confiance à travers l'Algérie</h2>
@@ -437,8 +493,7 @@ function NotificationPage() {
           </div>
         </div>
       </section>
-
-      <footer>
+      <footer id="footer">
         <div className="container">
           <div className="footer-links">
             <a href="#services">Services</a>
@@ -449,6 +504,41 @@ function NotificationPage() {
             <a href="https://google.com/">Politique de confidentialité</a>
           </div>
           <div className="footer-bottom">
+            <div className="logo logo-footer">
+              {/* <span>🍉</span> */}
+              <img src={palestineIcon} alt="Palestine flag" />
+              {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                shapeRendering="geometricPrecision"
+                textRendering="geometricPrecision"
+                imageRendering="optimizeQuality"
+                fillRule="evenodd"
+                clipRule="evenodd"
+                viewBox="0 0 512 512"
+              >
+                {/* <path
+                  fill="#4D4D4D"
+                  fillRule="nonzero"
+                  d="M256-.001c70.684 0 134.69 28.664 181.013 74.988C483.337 121.31 512.001 185.316 512.001 256c0 70.684-28.664 134.69-74.988 181.013C390.69 483.337 326.684 512.001 256 512.001c-70.677 0-134.69-28.664-181.013-74.988C28.663 390.69-.001 326.676-.001 256c0-70.684 28.664-134.69 74.988-181.013C121.31 28.663 185.316-.001 256-.001z"
+                /> */}
+                <path
+                  fill="#fff"
+                  fillRule="nonzero"
+                  d="M256.001 19.596c65.278 0 124.383 26.466 167.163 69.243 42.776 42.779 69.243 101.884 69.243 167.162s-26.467 124.383-69.246 167.16c-42.777 42.779-101.882 69.246-167.16 69.246-65.278 0-124.383-26.467-167.162-69.243-42.777-42.78-69.243-101.885-69.243-167.163S46.062 131.618 88.839 88.839c42.779-42.777 101.884-69.243 167.162-69.243z"
+                />
+                <path
+                  fill="#063"
+                  fillRule="nonzero"
+                  d="M255.939 39.594v432.815c-119.491-.033-216.345-96.911-216.345-216.408 0-119.5 96.854-216.375 216.345-216.407z"
+                />
+                <path
+                  fill="#D21034"
+                  fillRule="nonzero"
+                  d="M351.787 196.335c-19.747-34.233-56.313-55.338-95.848-55.338-61.115 0-110.676 49.561-110.676 110.676 0 61.113 49.561 110.677 110.676 110.677 39.535 0 76.086-21.094 95.854-55.333a88.607 88.607 0 01-69.122 33.197c-48.893 0-88.541-39.65-88.541-88.541 0-48.893 39.648-88.541 88.541-88.541a88.558 88.558 0 0169.116 33.206v-.003zm4.259 55.338l-100.107-32.526 61.871 85.154V199.042L255.939 284.2l100.107-32.527z"
+                />
+              </svg>
+            </div>
             <p>&copy; 2025 Jeel Work Algérie. Tous droits réservés.</p>
             <p>
               Jeel Work : pour une nouvelle génération de services en Algérie.

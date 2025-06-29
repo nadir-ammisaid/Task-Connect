@@ -106,9 +106,26 @@ header {
   height: 1.875rem;
 }
 
+.logo img {
+  width: 1.65rem;
+  height: 1.65rem;
+  background: white;
+  border-radius: 50%;
+  /* padding: 0.25rem; */
+  box-shadow: 0 0 0 1px #fff;
+}
+
 .logo-img {
   width: 1.875rem;
   height: 1.875rem;
+}
+
+.logo-footer {
+  font-size: 1.5rem;
+  color: #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-links {
@@ -565,7 +582,7 @@ header {
 }
 
 /* Footer */
-footer {
+#footer {
   background: #1f2937;
   color: white;
   text-align: center;
