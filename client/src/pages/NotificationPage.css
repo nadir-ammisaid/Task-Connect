@@ -394,6 +394,11 @@ header {
   padding: 2rem 0;
 }
 
+/* Carrousel caché par défaut sur desktop pour les étapes */
+.steps-carousel {
+  display: none;
+}
+
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
@@ -542,6 +547,11 @@ header {
   padding: 2rem 0;
 }
 
+/* Carrousel caché par défaut sur desktop pour les témoignages */
+.testimonials-carousel {
+  display: none;
+}
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
@@ -679,6 +689,66 @@ header {
     margin: 0; /* Supprime les marges par défaut */
   }
 
+  /* How It Works Mobile - Cache la grid sur mobile */
+  .steps-grid {
+    display: none;
+  }
+
+  /* Affiche le carrousel sur mobile pour les étapes */
+  .steps-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    /* Masquer la scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE et Edge */
+  }
+
+  .steps-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari et Opera */
+  }
+
+  .steps-carousel .step {
+    flex: 0 0 75vw; /* Largeur de 75% de la viewport */
+    scroll-snap-align: start;
+    min-width: 75vw;
+    max-width: 75vw;
+    margin: 0; /* Supprime les marges par défaut */
+  }
+
+  /* Testimonials Mobile - Cache la grid sur mobile */
+  .testimonials-grid {
+    display: none;
+  }
+
+  /* Affiche le carrousel sur mobile pour les témoignages */
+  .testimonials-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    /* Masquer la scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE et Edge */
+  }
+
+  .testimonials-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari et Opera */
+  }
+
+  .testimonials-carousel .testimonial-card {
+    flex: 0 0 75vw; /* Largeur de 75% de la viewport */
+    scroll-snap-align: start;
+    min-width: 75vw;
+    max-width: 75vw;
+    margin: 0; /* Supprime les marges par défaut */
+  }
+
   .carousel-dots {
     display: flex;
     justify-content: center;
@@ -703,6 +773,30 @@ header {
 
   .services-carousel .service-card {
     flex: 0 0 70vw; /* 70% de la largeur pour laisser voir 30% */
+    min-width: 70vw;
+    max-width: 70vw;
+    padding: 1.5rem;
+  }
+
+  /* Steps pour écrans en dessous de 550px */
+  .steps-carousel {
+    gap: 1.5rem;
+  }
+
+  .steps-carousel .step {
+    flex: 0 0 70vw;
+    min-width: 70vw;
+    max-width: 70vw;
+    padding: 1.5rem;
+  }
+
+  /* Testimonials pour écrans en dessous de 550px */
+  .testimonials-carousel {
+    gap: 1.5rem;
+  }
+
+  .testimonials-carousel .testimonial-card {
+    flex: 0 0 70vw;
     min-width: 70vw;
     max-width: 70vw;
     padding: 1.5rem;
@@ -738,5 +832,21 @@ header {
 
   .service-card p {
     font-size: 0.9rem;
+  }
+
+  /* Steps pour très petits écrans */
+  .steps-carousel .step {
+    flex: 0 0 75vw;
+    min-width: 75vw;
+    max-width: 75vw;
+    padding: 1.5rem;
+  }
+
+  /* Testimonials pour très petits écrans */
+  .testimonials-carousel .testimonial-card {
+    flex: 0 0 75vw;
+    min-width: 75vw;
+    max-width: 75vw;
+    padding: 1.5rem;
   }
 }
