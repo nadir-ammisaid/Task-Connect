@@ -28,11 +28,11 @@ a:hover {
   color: #4f46e5;
 }
 
-h1,
+/* h1,
 h2,
 h3 {
   margin: 0 0 1rem 0;
-}
+} */
 
 h2 {
   text-align: center;
@@ -55,7 +55,7 @@ h2 {
   font-weight: 600;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 0.25rem 0.9375rem rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0.25rem 1.9375rem rgba(255, 255, 255, 0.6);
 }
 
 .btn:hover {
@@ -311,16 +311,15 @@ header {
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
 }
 
-.hero-emoji {
+/* .hero-emoji {
   font-size: 3rem;
   margin-bottom: 1rem;
   display: block;
-}
+} */
 
 /* Services Section */
 .services {
@@ -392,7 +391,7 @@ header {
 /* How It Works */
 .how-it-works {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .steps-grid {
@@ -540,7 +539,7 @@ header {
 /* Testimonials */
 .testimonials {
   background: white;
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .testimonials-grid {
@@ -581,12 +580,16 @@ header {
   font-size: 0.9rem;
 }
 
+#footer-slogan {
+  margin-top: 2rem;
+}
+
 /* Footer */
 #footer {
   background: #1f2937;
   color: white;
   text-align: center;
-  padding: 3rem 0 2rem;
+  padding: 2rem 0 2rem;
 }
 
 .footer-links {
