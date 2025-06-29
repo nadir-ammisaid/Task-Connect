@@ -493,6 +493,11 @@ function NotificationPage() {
           </div>
         </div>
       </section>
+
+      <h2 id="footer-slogan">
+        Facilitons ensemble l'accès à des artisans de confiance, où que vous
+        soyez
+      </h2>
       <footer id="footer">
         <div className="container">
           <div className="footer-links">
@@ -542,10 +547,6 @@ function NotificationPage() {
             <p>&copy; 2025 Jeel Work Algérie. Tous droits réservés.</p>
             <p>
               Jeel Work : pour une nouvelle génération de services en Algérie.
-            </p>
-            <p>
-              Facilitons ensemble l'accès à des artisans de confiance, où que
-              vous soyez
             </p>
           </div>
         </div>
