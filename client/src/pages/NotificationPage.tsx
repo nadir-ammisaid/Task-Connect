@@ -8,10 +8,10 @@ declare global {
   }
 }
 
-import artisanat from "../assets/images/artisanat.jpg";
 import googlePlayIcon from "../assets/images/google-play-playstore-logo.png";
 import internetWebIcon from "../assets/images/internet-web-browser-icon.svg";
 import jeelWorkIcon from "../assets/images/jeelWorkLogo.webp";
+import jobbersIllustration from "../assets/images/jobbersIllustration.jpg";
 import palestineIcon from "../assets/images/palestine-flag-circular-17840.svg";
 
 function NotificationPage() {
@@ -584,7 +584,7 @@ function NotificationPage() {
           </p>
         </div>
         <div className="cta-image">
-          <img src={artisanat} alt="Professionnel de confiance" />
+          <img src={jobbersIllustration} alt="Professionnel de confiance" />
         </div>
       </section>
 
