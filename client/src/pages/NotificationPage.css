@@ -763,7 +763,9 @@ header {
     font-style: italic;
   }
 
-  .steps-grid {
+  /* pour afficher les cartes how to 2 par ligne au format mobile*/
+
+  /* .steps-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -774,6 +776,20 @@ header {
     flex: 0 1 calc(50% - 0.5rem);
     min-width: calc(50% - 0.5rem);
     max-width: calc(50% - 0.5rem);
+    padding: 1.5rem;
+  } */
+
+  /* pour afficher les cartes how to 1 par ligne au format mobile*/
+  .steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .step {
+    flex: 1;
+    width: 100%;
     padding: 1.5rem;
   }
 }
