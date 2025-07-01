@@ -11,7 +11,7 @@ declare global {
 import googlePlayIcon from "../assets/images/google-play-playstore-logo.png";
 import internetWebIcon from "../assets/images/internet-web-browser-icon.svg";
 import jeelWorkIcon from "../assets/images/jeelWorkLogo.webp";
-import jobbersIllustration from "../assets/images/jobbersIllustration.jpg";
+import jobbersIllustration from "../assets/images/jobbersIllustration.png";
 import palestineIcon from "../assets/images/palestine-flag-circular-17840.svg";
 
 function NotificationPage() {
