@@ -269,6 +269,7 @@ function NotificationPage() {
             </div>
 
             {/* Carrousel pour mobile */}
+
             <div className="services-carousel">
               <div className="service-card">
                 <span className="service-icon">🔌</span>
