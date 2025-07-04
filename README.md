@@ -7,7 +7,7 @@ Projet personnel réalisé en suivant une architecture MVC propre et modulaire.
 
 Ce projet repose sur une stack moderne et une base de données relationnelle robuste avec des contraintes d’intégrité (clés étrangères, CHECK, ON DELETE CASCADE), permettant d’assurer la fiabilité des données et la scalabilité de l’application.
 
-🔗 Découvrez le projet en ligne : [www.taskconnect.fr](http://www.taskconnect.fr)
+🔗 Découvrez le projet en ligne : [www.taskconnect.fr](http://www.taskconnect.fr) 
 
 **💬 Vos avis m'intéressent — n'hésitez pas à me faire part de vos retours ou suggestions !** 
 
