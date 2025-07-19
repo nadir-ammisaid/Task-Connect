@@ -9,7 +9,7 @@ Ce projet repose sur une stack moderne et une base de données relationnelle rob
 
 🔗 Découvrez le projet en ligne : [www.taskconnect.fr](http://www.taskconnect.fr)  
 
-**💬 Vos avis m'intéressent — n'hésitez pas à me faire part de vos retours ou suggestions !** 
+**💬 Vos avis m'intéressent — n'hésitez pas à me faire part de vos retours ou suggestions !**  
 
 Ce projet est basé sur le monorepo JS proposé par la Wild Code School (v7.1.7), pré-configuré avec des outils de qualité industrielle :
 - **Concurrently** : Exécution simultanée de plusieurs commandes dans un seul terminal
