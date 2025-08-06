@@ -635,10 +635,10 @@ function NotificationPage() {
                 />
               </svg>
             </div>
-            <p>&copy; 2025 Jeel Work Algérie. Tous droits réservés.</p>
             <p>
               Jeel Work : pour une nouvelle génération de services en Algérie.
             </p>
+            <p>&copy; 2025 Jeel Work Algérie. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
