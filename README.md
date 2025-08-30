@@ -234,7 +234,7 @@ CLIENT_URL=http://localhost:3000
 
 ## Auteur
 
-Projet personnel développé en autonomie par **Nadir AMMI SAID**, pour approfondir mes compétences en développement full-stack. 
+Projet personnel développé en autonomie par [**Nadir AMMI SAID**](https://www.linkedin.com/in/nadir-ammisaid/), pour approfondir mes compétences en développement full-stack. 
 🔗 Découvrez le projet en ligne : [www.taskconnect.fr](http://www.taskconnect.fr)
 
 **💬 Vos avis m'intéressent — n'hésitez pas à me faire part de vos retours ou suggestions !**
