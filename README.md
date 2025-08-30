@@ -225,7 +225,7 @@ CLIENT_URL=http://localhost:3000
 
 ## Sécurité
 
-- Requêtes SQL préparées via `mysql2/promise`
+- Requêtes SQL préparées via `mysql2/promise` 
 - Authentification JWT stockée en cookie `httpOnly` avec `SameSite=Strict` (à implémenter bientôt)
 - Hashage sécurisé des mots de passe avec **argon2** (à implémenter bientôt)
 - Middleware `verifyToken` pour protéger les routes sensibles (à implémenter bientôt)
@@ -234,7 +234,7 @@ CLIENT_URL=http://localhost:3000
 
 ## Auteur
 
-Projet personnel développé en autonomie par **Nadir AMMI SAID**, pour approfondir mes compétences en développement full-stack. 
+Projet personnel développé en autonomie par [**Nadir AMMI SAID**](https://www.linkedin.com/in/nadir-ammisaid/), pour approfondir mes compétences en développement full-stack. 
 🔗 Découvrez le projet en ligne : [www.taskconnect.fr](http://www.taskconnect.fr)
 
 **💬 Vos avis m'intéressent — n'hésitez pas à me faire part de vos retours ou suggestions !**
