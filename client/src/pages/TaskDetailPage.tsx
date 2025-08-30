@@ -87,7 +87,7 @@ function TaskDetailPage() {
 
                 <div className="info-row">
                   <img src={timeIcon} alt="time" className="time-icon-detail" />
-                  <span>Tomorrow, 11:00 — 13:00 (2h)</span>
+                  <span>Tomorrow, 11:00 - 13:00 (2h)</span>
                 </div>
 
                 <div className="info-row">

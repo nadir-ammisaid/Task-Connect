@@ -50,7 +50,7 @@ function TaskCard() {
             </header>
             <section id="time-info">
               <img src={timeIcon} alt="time-icon" className="taskCardIcons" />
-              <p>Tomorrow, 11:00 — 13:00 (2h)</p>
+              <p>Tomorrow, 11:00 - 13:00 (2h)</p>
             </section>
             <section id="location">
               <img
