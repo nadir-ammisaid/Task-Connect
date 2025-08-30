@@ -234,10 +234,12 @@ CLIENT_URL=http://localhost:3000
 
 ## Auteur
 
-Projet personnel développé en autonomie par [**Nadir AMMI SAID**](https://www.linkedin.com/in/nadir-ammisaid/), pour approfondir mes compétences en développement full-stack. 
+Projet personnel développé en autonomie par [**Nadir AMMI SAID**](https://www.linkedin.com/in/nadir-ammisaid/), pour approfondir mes compétences en développement full-stack.
+<br/>
 🔗 Découvrez le projet en ligne : [www.taskconnect.fr](http://www.taskconnect.fr)
 
 **💬 Vos avis m'intéressent — n'hésitez pas à me faire part de vos retours ou suggestions !**
+<br/>
 📩 Vous pouvez me contacter directement sur LinkedIn : [https://www.linkedin.com/in/nadir-ammisaid/](https://www.linkedin.com/in/nadir-ammisaid/)
 
 
@@ -484,9 +486,11 @@ CLIENT_URL=http://localhost:3000
 ## Author
 
 Personal project independently developed by [**Nadir AMMI SAID**](https://www.linkedin.com/in/nadir-ammisaid/) to deepen my full-stack development skills.
+<br/>
 🔗 Discover the project online: [www.taskconnect.fr](http://www.taskconnect.fr)
 
 **💬 Your feedback matters — don't hesitate to share your thoughts or suggestions!**
+<br/>
 📩 You can contact me directly on LinkedIn: [https://www.linkedin.com/in/nadir-ammisaid/](https://www.linkedin.com/in/nadir-ammisaid/)
 
 
