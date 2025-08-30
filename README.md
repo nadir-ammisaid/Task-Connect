@@ -238,6 +238,7 @@ Projet personnel développé en autonomie par [**Nadir AMMI SAID**](https://www.
 🔗 Découvrez le projet en ligne : [www.taskconnect.fr](http://www.taskconnect.fr)
 
 **💬 Vos avis m'intéressent — n'hésitez pas à me faire part de vos retours ou suggestions !**
+📩 Vous pouvez me contacter directement sur LinkedIn : [https://www.linkedin.com/in/nadir-ammisaid/](https://www.linkedin.com/in/nadir-ammisaid/)
 
 
 ## Contribution
