@@ -225,7 +225,7 @@ CLIENT_URL=http://localhost:3000
 
 ## Sécurité
 
-- Requêtes SQL préparées via `mysql2/promise`
+- Requêtes SQL préparées via `mysql2/promise` 
 - Authentification JWT stockée en cookie `httpOnly` avec `SameSite=Strict` (à implémenter bientôt)
 - Hashage sécurisé des mots de passe avec **argon2** (à implémenter bientôt)
 - Middleware `verifyToken` pour protéger les routes sensibles (à implémenter bientôt)
