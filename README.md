@@ -9,7 +9,7 @@ Ce projet repose sur une stack moderne et une base de données relationnelle rob
 
 🔗 Découvrez le projet en ligne : [www.taskconnect.fr](http://www.taskconnect.fr)  
 
-**💬 Vos avis m'intéressent — n'hésitez pas à me faire part de vos retours ou suggestions !** 
+**💬 Vos avis m'intéressent - n'hésitez pas à me faire part de vos retours ou suggestions !** 
 
 Ce projet est basé sur le monorepo JS proposé par la Wild Code School (v7.1.7), pré-configuré avec des outils de qualité industrielle :
 - **Concurrently** : Exécution simultanée de plusieurs commandes dans un seul terminal
@@ -238,7 +238,7 @@ Projet personnel développé en autonomie par [**Nadir AMMI SAID**](https://www.
 <br/>
 🔗 Découvrez le projet en ligne : [www.taskconnect.fr](http://www.taskconnect.fr)
 
-**💬 Vos avis m'intéressent — n'hésitez pas à me faire part de vos retours ou suggestions !**
+**💬 Vos avis m'intéressent - n'hésitez pas à me faire part de vos retours ou suggestions !**
 <br/>
 📩 Vous pouvez me contacter directement sur LinkedIn : [https://www.linkedin.com/in/nadir-ammisaid/](https://www.linkedin.com/in/nadir-ammisaid/)
 
@@ -273,7 +273,7 @@ This project relies on a modern stack and a robust relational database with inte
 
 🔗 Discover the project online: [www.taskconnect.fr](http://www.taskconnect.fr)
 
-**💬 Your feedback matters — don't hesitate to share your thoughts or suggestions!**
+**💬 Your feedback matters - don't hesitate to share your thoughts or suggestions!**
 
 This project is based on the JS monorepo proposed by Wild Code School (v7.1.7), pre-configured with industrial quality tools:
 - **Concurrently**: Simultaneous execution of multiple commands in a single terminal
@@ -489,7 +489,7 @@ Personal project independently developed by [**Nadir AMMI SAID**](https://www.li
 <br/>
 🔗 Discover the project online: [www.taskconnect.fr](http://www.taskconnect.fr)
 
-**💬 Your feedback matters — don't hesitate to share your thoughts or suggestions!**
+**💬 Your feedback matters - don't hesitate to share your thoughts or suggestions!**
 <br/>
 📩 You can contact me directly on LinkedIn: [https://www.linkedin.com/in/nadir-ammisaid/](https://www.linkedin.com/in/nadir-ammisaid/)
 
