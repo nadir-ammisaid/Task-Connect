@@ -483,10 +483,11 @@ CLIENT_URL=http://localhost:3000
 
 ## Author
 
-Personal project independently developed by **Nadir AMMI SAID** to deepen my full-stack development skills.
+Personal project independently developed by [**Nadir AMMI SAID**](https://www.linkedin.com/in/nadir-ammisaid/) to deepen my full-stack development skills.
 🔗 Discover the project online: [www.taskconnect.fr](http://www.taskconnect.fr)
 
 **💬 Your feedback matters — don't hesitate to share your thoughts or suggestions!**
+📩 You can contact me directly on LinkedIn: [https://www.linkedin.com/in/nadir-ammisaid/](https://www.linkedin.com/in/nadir-ammisaid/)
 
 
 ## Contribution
