@@ -490,7 +490,7 @@ Personal project independently developed by [**Nadir AMMI SAID**](https://www.li
 📩 You can contact me directly on LinkedIn: [https://www.linkedin.com/in/nadir-ammisaid/](https://www.linkedin.com/in/nadir-ammisaid/)
 
 
-## Contribution
+## Contribution 
 
 To contribute to the project:
 1. **Fork** the repository
