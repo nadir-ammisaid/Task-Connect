@@ -1,4 +1,15 @@
-# Task Connect
+<a href="#fr">
+  <img src="https://flagcdn.com/w40/fr.png" width="20" alt="Français"> Français
+</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="#en">
+  <img src="https://flagcdn.com/w40/gb.png" width="20" alt="English"> English
+</a>
+
+<hr style="margin-top: 4px; margin-bottom: 12px; border: none; border-top: 1px solid #ccc;" />
+
+<img id="fr" src="https://flagcdn.com/w40/fr.png" width="20" alt="Français"> Français
+
+<h1>Task Connect</h1>
 
 Task Connect est une plateforme web collaborative qui met en relation des particuliers avec des prestataires de services du quotidien (bricolage, ménage, jardinage, aide à domicile, etc.).  
 L'application permet de publier des tâches/missions, d'y répondre via des offres, de consulter des avis et de gérer les profils utilisateurs dans un environnement sécurisé.
@@ -258,11 +269,13 @@ Pour contribuer au projet :
 - Ajoutez des tests pour toute nouvelle fonctionnalité
 - Suivez les principes SOLID pour une architecture de code propre et maintenable
 
+<br/>
+<hr id="en" style="margin-top: 4px; margin-bottom: 12px; border: none; border-top: 1px solid #ccc;" />
+<br/>
 
----------------
----------------
+<img src="https://flagcdn.com/w40/gb.png" width="20" alt="English"> English
 
-# Task Connect
+<h1>Task Connect</h1>
 
 Task Connect is a collaborative web platform that connects individuals with everyday service providers (handyman, cleaning, gardening, home assistance, etc.).  
 The application allows users to post tasks/missions, respond to them via offers, consult reviews, and manage user profiles in a secure environment.
